@@ -55,7 +55,8 @@ public class ExampleLauncher extends ExpandableListActivity {
 	// Constructors
 	// ===========================================================
 
-	@Override
+	@SuppressWarnings("deprecation")
+    @Override
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -100,7 +101,8 @@ public class ExampleLauncher extends ExpandableListActivity {
 	// Methods for/from SuperClass/Interfaces
 	// ===========================================================
 
-	@Override
+	@SuppressWarnings("deprecation")
+    @Override
 	protected Dialog onCreateDialog(final int pId) {
 		switch(pId) {
 			case DIALOG_DEVICE_NOT_SUPPORTED:

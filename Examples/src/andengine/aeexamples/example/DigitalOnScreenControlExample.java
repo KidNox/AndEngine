@@ -120,12 +120,14 @@ public class DigitalOnScreenControlExample extends SimpleBaseGameActivity {
 		return scene;
 	}
 
-	@Override
+	@SuppressWarnings("deprecation")
+    @Override
 	public void onGameCreated() {
 		this.showDialog(DIALOG_ALLOWDIAGONAL_ID);
 	}
 
-	@Override
+	@SuppressWarnings("deprecation")
+    @Override
 	protected Dialog onCreateDialog(final int pID) {
 		switch(pID) {
 			case DIALOG_ALLOWDIAGONAL_ID:

@@ -82,7 +82,8 @@ public abstract class BaseBenchmark extends SimpleBaseGameActivity {
 	protected void showResult(final float pFPS) {
 		this.mFPS = pFPS;
 		this.runOnUiThread(new Runnable() {
-			@Override
+			@SuppressWarnings("deprecation")
+            @Override
 			public void run() {
 				BaseBenchmark.this.showDialog(DIALOG_SHOW_RESULT);
 			}
@@ -123,7 +124,8 @@ public abstract class BaseBenchmark extends SimpleBaseGameActivity {
 		}));
 	}
 
-	@Override
+	@SuppressWarnings("deprecation")
+    @Override
 	protected Dialog onCreateDialog(final int pID) {
 		switch(pID) {
 			case DIALOG_SHOW_RESULT:

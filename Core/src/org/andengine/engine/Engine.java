@@ -690,7 +690,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 
 			if(this.mAccelerationData == null) {
 				final Display display = ((WindowManager) pContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-				final int displayRotation = display.getOrientation();
+				final int displayRotation = display.getRotation();
 				this.mAccelerationData = new AccelerationData(displayRotation);
 			}
 
@@ -733,7 +733,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 
 			if(this.mOrientationData == null) {
 				final Display display = ((WindowManager) pContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-				final int displayRotation = display.getOrientation();
+				final int displayRotation = display.getRotation();
 				this.mOrientationData = new OrientationData(displayRotation);
 			}
 

@@ -17,7 +17,7 @@ public enum WakeLockOptions {
 	/** Screen is on at full brightness. Keyboard backlight is on at full brightness. Requires <b>WAKE_LOCK</b> permission! */
 	BRIGHT(PowerManager.FULL_WAKE_LOCK),
 	/** Screen is on at full brightness. Keyboard backlight will be allowed to go off. Requires <b>WAKE_LOCK</b> permission!*/
-	SCREEN_BRIGHT(PowerManager.SCREEN_BRIGHT_WAKE_LOCK),
+    @SuppressWarnings("deprecation")SCREEN_BRIGHT(PowerManager.SCREEN_BRIGHT_WAKE_LOCK),
 	/** Screen is on but may be dimmed. Keyboard backlight will be allowed to go off. Requires <b>WAKE_LOCK</b> permission!*/
 	SCREEN_DIM(PowerManager.SCREEN_DIM_WAKE_LOCK),
 	/** Screen is on at full brightness. Does <b>not</b> require <b>WAKE_LOCK</b> permission! */
