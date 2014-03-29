@@ -10,31 +10,8 @@ import org.andengine.util.debug.Debug.DebugLevel;
  * @since 12:23:06 - 19.01.2012
  */
 public class ThreadUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	private static final int STACKTRACE_CALLER_DEPTH = 3;
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static void dumpCurrentThreadInfo() {
 		ThreadUtils.dumpCurrentThreadInfo(DebugLevel.DEBUG, Thread.currentThread().getStackTrace()[ThreadUtils.STACKTRACE_CALLER_DEPTH]);
@@ -48,7 +25,4 @@ public class ThreadUtils {
 		Debug.log(pDebugLevel, pCaller.getClassName() + "." + pCaller.getMethodName() + "(" + pCaller.getFileName() + ".java:" + pCaller.getLineNumber() + ") @(Thread: '" + Thread.currentThread().getName() + "')");
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -7,26 +7,12 @@ package org.andengine.engine.options;
  * @since 23:18:06 - 22.11.2011
  */
 public class TouchOptions {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	private static final long TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT = 20;
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private boolean mNeedsMultiTouch;
 	private long mTouchEventIntervalMilliseconds = TouchOptions.TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public boolean needsMultiTouch() {
 		return this.mNeedsMultiTouch;
@@ -45,15 +31,4 @@ public class TouchOptions {
 		this.mTouchEventIntervalMilliseconds = pTouchEventIntervalMilliseconds;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

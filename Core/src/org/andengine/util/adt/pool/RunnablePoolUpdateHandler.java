@@ -10,17 +10,6 @@ package org.andengine.util.adt.pool;
  * @since 23:03:58 - 21.08.2010
  */
 public abstract class RunnablePoolUpdateHandler<T extends RunnablePoolItem> extends PoolUpdateHandler<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public RunnablePoolUpdateHandler() {
 
@@ -38,14 +27,6 @@ public abstract class RunnablePoolUpdateHandler<T extends RunnablePoolItem> exte
 		super(pInitialPoolSize, pGrowth, pAvailableItemCountMaximum);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
 	@Override
 	protected abstract T onAllocatePoolItem();
 
@@ -54,11 +35,4 @@ public abstract class RunnablePoolUpdateHandler<T extends RunnablePoolItem> exte
 		pRunnablePoolItem.run();
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

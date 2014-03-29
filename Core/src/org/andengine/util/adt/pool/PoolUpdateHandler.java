@@ -15,20 +15,9 @@ import org.andengine.util.adt.queue.concurrent.SynchronizedQueue;
  * @since 23:02:58 - 21.08.2010
  */
 public abstract class PoolUpdateHandler<T extends PoolItem> implements IUpdateHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final Pool<T> mPool;
-	private final IQueue<T> mScheduledPoolItemQueue = new SynchronizedQueue<T>(new ShiftList<T>());
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+	private final IQueue<T> mScheduledPoolItemQueue = new SynchronizedQueue<T>(new ShiftList<T>());//
 
 	public PoolUpdateHandler() {
 		this.mPool = new Pool<T>() {
@@ -66,14 +55,6 @@ public abstract class PoolUpdateHandler<T extends PoolItem> implements IUpdateHa
 		};
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
 	protected abstract T onAllocatePoolItem();
 
 	protected abstract void onHandlePoolItem(final T pPoolItem);
@@ -101,10 +82,6 @@ public abstract class PoolUpdateHandler<T extends PoolItem> implements IUpdateHa
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public T obtainPoolItem() {
 		return this.mPool.obtainPoolItem();
 	}
@@ -119,7 +96,4 @@ public abstract class PoolUpdateHandler<T extends PoolItem> implements IUpdateHa
 		this.mScheduledPoolItemQueue.enter(pPoolItem);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

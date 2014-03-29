@@ -16,37 +16,6 @@ import org.andengine.util.call.Callback;
  * @since 16:42:08 - 12.07.2011
  */
 public class BuildableTextureAtlasTextureRegionFactory {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Methods using BuildableBitmapTexture
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static <T extends ITextureAtlasSource, A extends ITextureAtlas<T>> TextureRegion createFromSource(final BuildableTextureAtlas<T, A> pBuildableTextureAtlas, final T pTextureAtlasSource, final boolean pRotated) {
 		final TextureRegion textureRegion = new TextureRegion(pBuildableTextureAtlas, 0, 0, pTextureAtlasSource.getTextureWidth(), pTextureAtlasSource.getTextureHeight(), pRotated);
@@ -82,7 +51,4 @@ public class BuildableTextureAtlasTextureRegionFactory {
 		return tiledTextureRegion;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

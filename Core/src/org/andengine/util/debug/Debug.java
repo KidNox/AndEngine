@@ -12,25 +12,10 @@ import android.util.Log;
  * @since 13:29:16 - 08.03.2010
  */
 public class Debug {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	private static String sTag = Constants.DEBUGTAG;
 	private static String sDebugUser = "";
 	private static DebugLevel sDebugLevel = DebugLevel.VERBOSE;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public static String getTag() {
 		return Debug.sTag;
@@ -57,14 +42,6 @@ public class Debug {
 		}
 		Debug.sDebugUser = pDebugUser;
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static void log(final DebugLevel pDebugLevel, final String pMessage) {
 		switch(pDebugLevel) {

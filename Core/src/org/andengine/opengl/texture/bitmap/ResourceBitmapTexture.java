@@ -16,17 +16,6 @@ import android.content.res.Resources;
  * @since 12:10:08 - 02.03.2012
  */
 public class ResourceBitmapTexture extends BitmapTexture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public ResourceBitmapTexture(final TextureManager pTextureManager, final Resources pResources, final int pDrawableResourceID) throws IOException {
 		super(pTextureManager, new ResourceInputStreamOpener(pResources, pDrawableResourceID));
@@ -48,19 +37,4 @@ public class ResourceBitmapTexture extends BitmapTexture {
 		super(pTextureManager, new ResourceInputStreamOpener(pResources, pDrawableResourceID), pBitmapTextureFormat, pTextureOptions, pTextureStateListener);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

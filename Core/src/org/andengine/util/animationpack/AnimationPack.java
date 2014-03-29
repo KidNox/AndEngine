@@ -10,29 +10,14 @@ import org.andengine.util.texturepack.TexturePackLibrary;
  * @since 16:58:15 - 03.05.2012
  */
 public class AnimationPack {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	private final TexturePackLibrary mTexturePackLibrary;
 	private final AnimationPackTiledTextureRegionLibrary mAnimationPackTiledTextureRegionLibrary;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public AnimationPack(final TexturePackLibrary pTexturePackLibrary, final AnimationPackTiledTextureRegionLibrary pAnimationPackTiledTextureRegionLibrary) {
 		this.mTexturePackLibrary = pTexturePackLibrary;
 		this.mAnimationPackTiledTextureRegionLibrary = pAnimationPackTiledTextureRegionLibrary;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public TexturePackLibrary getTexturePackLibrary() {
 		return this.mTexturePackLibrary;
@@ -42,15 +27,4 @@ public class AnimationPack {
 		return this.mAnimationPackTiledTextureRegionLibrary;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

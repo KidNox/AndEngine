@@ -8,13 +8,6 @@ package org.andengine.engine.camera;
  * @since 15:55:54 - 27.07.2010
  */
 public class BoundCamera extends Camera {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected boolean mBoundsEnabled;
 
@@ -28,10 +21,6 @@ public class BoundCamera extends Camera {
 
 	protected float mBoundsWidth;
 	protected float mBoundsHeight;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public BoundCamera(final float pX, final float pY, final float pWidth, final float pHeight) {
 		super(pX, pY, pWidth, pHeight);
@@ -177,7 +166,4 @@ public class BoundCamera extends Camera {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

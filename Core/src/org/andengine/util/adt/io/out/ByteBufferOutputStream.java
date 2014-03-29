@@ -13,35 +13,16 @@ import java.nio.ByteBuffer;
  * @since 02:19:02 - 14.08.2011
  */
 public class ByteBufferOutputStream extends OutputStream {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected final int mMaximumGrow;
 
 	protected byte mData[];
 	protected int mCount;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
 	public ByteBufferOutputStream(final int pInitialCapacity, final int pMaximumGrow) {
 		this.mMaximumGrow = pMaximumGrow;
 		this.mData = new byte[pInitialCapacity];
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void write(final int pByte) {
@@ -61,10 +42,6 @@ public class ByteBufferOutputStream extends OutputStream {
 	public void close() throws IOException {
 
 	}
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	private void ensureCapacity(final int pDesiredCapacity) {
 		if(pDesiredCapacity - this.mData.length > 0) {
@@ -97,7 +74,4 @@ public class ByteBufferOutputStream extends OutputStream {
 		return ByteBuffer.wrap(this.mData, 0, this.mCount).slice();
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

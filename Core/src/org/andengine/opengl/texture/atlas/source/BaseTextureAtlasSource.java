@@ -8,14 +8,6 @@ package org.andengine.opengl.texture.atlas.source;
  * @since 13:55:12 - 12.07.2011
  */
 public abstract class BaseTextureAtlasSource implements ITextureAtlasSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	protected int mTextureX;
 	protected int mTextureY;
 	protected int mTextureWidth;
@@ -85,11 +77,4 @@ public abstract class BaseTextureAtlasSource implements ITextureAtlasSource {
 		return this.getClass().getSimpleName() + "( " + this.getTextureWidth() + "x" + this.getTextureHeight() + " @ "+ this.mTextureX + "/" + this.mTextureY + " )";
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -18,26 +18,11 @@ import android.graphics.Typeface;
  * @since 17:17:28 - 16.06.2010
  */
 public class FontFactory {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final boolean ANTIALIAS_DEFAULT = true;
 	private static final int COLOR_DEFAULT = Color.BLACK_ARGB_PACKED_INT;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private static String sAssetBasePath = "";
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	/**
 	 * @param pAssetBasePath must end with '<code>/</code>' or have <code>.length() == 0</code>.
@@ -58,13 +43,6 @@ public class FontFactory {
 		FontFactory.setAssetBasePath("");
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static Font create(final FontManager pFontManager, final ITexture pTexture, final float pSize) {
 		return FontFactory.create(pFontManager, pTexture, pSize, FontFactory.ANTIALIAS_DEFAULT, FontFactory.COLOR_DEFAULT);
@@ -176,7 +154,4 @@ public class FontFactory {
 		return new StrokeFont(pFontManager, pTexture, Typeface.createFromAsset(pAssetManager, FontFactory.sAssetBasePath + pAssetPath), pSize, pAntiAlias, pColor, pStrokeWidth, pStrokeColor, pStrokeOnly);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

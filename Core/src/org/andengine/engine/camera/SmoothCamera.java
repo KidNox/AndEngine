@@ -9,13 +9,6 @@ package org.andengine.engine.camera;
  * @since 22:11:17 - 25.03.2010
  */
 public class SmoothCamera extends ZoomCamera {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected float mMaxVelocityX;
 	protected float mMaxVelocityY;
@@ -195,12 +188,4 @@ public class SmoothCamera extends ZoomCamera {
 			return Math.max(pValue, -this.mMaxZoomFactorChange * pSecondsElapsed);
 		}
 	}
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

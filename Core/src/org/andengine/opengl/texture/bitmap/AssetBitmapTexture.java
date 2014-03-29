@@ -16,17 +16,6 @@ import android.content.res.AssetManager;
  * @since 10:45:48 - 02.03.2012
  */
 public class AssetBitmapTexture extends BitmapTexture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public AssetBitmapTexture(final TextureManager pTextureManager, final AssetManager pAssetManager, final String pAssetPath) throws IOException {
 		super(pTextureManager, new AssetInputStreamOpener(pAssetManager, pAssetPath));
@@ -48,19 +37,4 @@ public class AssetBitmapTexture extends BitmapTexture {
 		super(pTextureManager, new AssetInputStreamOpener(pAssetManager, pAssetPath), pBitmapTextureFormat, pTextureOptions, pTextureStateListener);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

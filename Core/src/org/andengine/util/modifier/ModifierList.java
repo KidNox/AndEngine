@@ -11,21 +11,10 @@ import org.andengine.util.adt.list.SmartList;
  * @since 14:34:57 - 03.09.2010
  */
 public class ModifierList<T> extends SmartList<IModifier<T>> implements IUpdateHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final long serialVersionUID = 1610345592534873475L;
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final T mTarget;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public ModifierList(final T pTarget) {
 		this.mTarget = pTarget;
@@ -36,17 +25,10 @@ public class ModifierList<T> extends SmartList<IModifier<T>> implements IUpdateH
 		this.mTarget = pTarget;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
 	public T getTarget() {
 		return this.mTarget;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public boolean add(final IModifier<T> pModifier) {
@@ -78,11 +60,4 @@ public class ModifierList<T> extends SmartList<IModifier<T>> implements IUpdateH
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

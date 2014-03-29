@@ -12,15 +12,8 @@ import org.andengine.util.modifier.IModifier.IModifierListener;
  * @param <T>
  */
 public class LoopModifier<T> extends BaseModifier<T> implements IModifierListener<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	public static final int LOOP_CONTINUOUS = -1;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private float mSecondsElapsed;
 	private final float mDuration;
@@ -34,10 +27,6 @@ public class LoopModifier<T> extends BaseModifier<T> implements IModifierListene
 
 	private boolean mModifierStartedCalled;
 	private boolean mFinishedCached;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public LoopModifier(final IModifier<T> pModifier) {
 		this(pModifier, LoopModifier.LOOP_CONTINUOUS);

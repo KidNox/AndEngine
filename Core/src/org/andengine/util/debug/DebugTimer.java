@@ -13,23 +13,13 @@ import org.andengine.util.debug.Debug.DebugLevel;
  * @since 13:52:42 - 02.11.2011
  */
 public class DebugTimer {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	private static final String SPLIT_STRING = "  Split: ";
 	private static final int INDENT_SPACES = SPLIT_STRING.length();
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	private final Stack<DebugTime> mDebugTimes = new Stack<DebugTime>();
 	private final DebugLevel mDebugLevel;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public DebugTimer(final String pLabel) {
 		this(DebugLevel.DEBUG, pLabel);
@@ -40,17 +30,6 @@ public class DebugTimer {
 		this.init(pLabel);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	private void init(final String pLabel) {
 		final long now = System.currentTimeMillis();
@@ -103,19 +82,7 @@ public class DebugTimer {
 		this.init(root.mLabel);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
-
 	public class DebugTime {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
 		private final long mStartTime;
 		private final String mLabel;
 		private final boolean mSplit;
@@ -123,10 +90,6 @@ public class DebugTimer {
 		private long mEndTime;
 		private ArrayList<DebugTime> mChildren;
 		private DebugTime mLastSplit;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public DebugTime(final long pStartTime, final String pLabel) {
 			this(pStartTime, pLabel, false);
@@ -137,18 +100,6 @@ public class DebugTimer {
 			this.mLabel = pLabel;
 			this.mSplit = pSplit;
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
 
 		public void begin(final DebugTime pDebugTime) {
 			this.ensureChildrenAllocated();
@@ -210,8 +161,5 @@ public class DebugTimer {
 			}
 		}
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

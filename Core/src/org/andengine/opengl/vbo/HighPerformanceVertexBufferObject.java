@@ -20,9 +20,6 @@ import android.opengl.GLES20;
  * @since 14:42:18 - 15.11.2011
  */
 public class HighPerformanceVertexBufferObject extends VertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	// ===========================================================
 	// Fields
@@ -39,22 +36,13 @@ public class HighPerformanceVertexBufferObject extends VertexBufferObject {
 		super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
 
 		this.mBufferData = new float[pCapacity];
-		if(SystemUtils.SDK_VERSION_HONEYCOMB_OR_LATER) {
-			this.mFloatBuffer = this.mByteBuffer.asFloatBuffer();
-		} else {
-			this.mFloatBuffer = null;
-		}
+        this.mFloatBuffer = this.mByteBuffer.asFloatBuffer();
 	}
 
 	public HighPerformanceVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final float[] pBufferData, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
 		super(pVertexBufferObjectManager, pBufferData.length, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
 		this.mBufferData = pBufferData;
-		
-		if(SystemUtils.SDK_VERSION_HONEYCOMB_OR_LATER) {
-			this.mFloatBuffer = this.mByteBuffer.asFloatBuffer();
-		} else {
-			this.mFloatBuffer = null;
-		}
+        this.mFloatBuffer = this.mByteBuffer.asFloatBuffer();
 	}
 
 	// ===========================================================
@@ -81,24 +69,21 @@ public class HighPerformanceVertexBufferObject extends VertexBufferObject {
 
 	@Override
 	protected void onBufferData() {
-		// TODO Check if, and how mow this condition affects performance.
-		if(SystemUtils.SDK_VERSION_HONEYCOMB_OR_LATER) {
-			// TODO Check if this is similar fast or faster than the non Honeycomb codepath.
-			this.mFloatBuffer.position(0);
-			this.mFloatBuffer.put(this.mBufferData);
+//		// TODO Check if, and how mow this condition affects performance.
+//		if(SystemUtils.SDK_VERSION_HONEYCOMB_OR_LATER) {
+//			// TODO Check if this is similar fast or faster than the non Honeycomb codepath.
+//		    this.mFloatBuffer.position(0);
+//          this.mFloatBuffer.put(this.mBufferData);
+//          GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.capacity(), this.mByteBuffer, this.mUsage);
+//		} else {
+//			BufferUtils.put(this.mByteBuffer, this.mBufferData, this.mBufferData.length, 0);
+//			GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.limit(), this.mByteBuffer, this.mUsage);
+//		}
 
-			GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.capacity(), this.mByteBuffer, this.mUsage);
-		} else {
-			BufferUtils.put(this.mByteBuffer, this.mBufferData, this.mBufferData.length, 0);
-			GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.limit(), this.mByteBuffer, this.mUsage);
-		}
-	}
+        this.mFloatBuffer.position(0);
+        this.mFloatBuffer.put(this.mBufferData);
+        GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.capacity(), this.mByteBuffer, this.mUsage);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

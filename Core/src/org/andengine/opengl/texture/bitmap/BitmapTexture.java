@@ -27,13 +27,6 @@ import android.opengl.GLUtils;
  * @since 16:16:25 - 30.07.2011
  */
 public class BitmapTexture extends Texture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final int mWidth;
 	private final int mHeight;
@@ -139,7 +132,4 @@ public class BitmapTexture extends Texture {
 		return BitmapFactory.decodeStream(this.mInputStreamOpener.open(), null, decodeOptions);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -7,14 +7,6 @@ package org.andengine.util.adt.list;
  * @since 15:27:16 - 01.02.2012
  */
 public interface IList<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public boolean isEmpty();
 	public T get(final int pIndex) throws IndexOutOfBoundsException;
 	public void set(final int pIndex, final T pItem) throws IndexOutOfBoundsException;

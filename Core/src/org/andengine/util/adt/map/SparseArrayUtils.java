@@ -11,31 +11,8 @@ import android.util.SparseIntArray;
  * @since 16:16:35 - 12.04.2012
  */
 public final class SparseArrayUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	public static final String toString(final SparseArray<?> pSparseArray) {
+	public static String toString(final SparseArray<?> pSparseArray) {
 		final StringBuilder stringBuilder = new StringBuilder();
 
 		final int size = pSparseArray.size();
@@ -51,7 +28,7 @@ public final class SparseArrayUtils {
 		return stringBuilder.toString();
 	}
 
-	public static final String toString(final SparseIntArray pSparseIntArray) {
+	public static String toString(final SparseIntArray pSparseIntArray) {
 		final StringBuilder stringBuilder = new StringBuilder();
 
 		final int size = pSparseIntArray.size();
@@ -67,7 +44,7 @@ public final class SparseArrayUtils {
 		return stringBuilder.toString();
 	}
 
-	public static final String toString(final SparseBooleanArray pSparseBooleanArray) {
+	public static String toString(final SparseBooleanArray pSparseBooleanArray) {
 		final StringBuilder stringBuilder = new StringBuilder();
 
 		final int size = pSparseBooleanArray.size();
@@ -83,7 +60,7 @@ public final class SparseArrayUtils {
 		return stringBuilder.toString();
 	}
 
-	public static final String toString(final LongSparseArray<?> pLongSparseArray) {
+	public static String toString(final LongSparseArray<?> pLongSparseArray) {
 		final StringBuilder stringBuilder = new StringBuilder();
 
 		final int size = pLongSparseArray.size();
@@ -99,7 +76,4 @@ public final class SparseArrayUtils {
 		return stringBuilder.toString();
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

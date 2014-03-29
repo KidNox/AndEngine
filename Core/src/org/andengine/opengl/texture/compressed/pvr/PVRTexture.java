@@ -32,9 +32,6 @@ import android.opengl.GLES20;
  * @since 16:18:10 - 13.07.2011
  */
 public abstract class PVRTexture extends Texture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	public static final int FLAG_MIPMAP = (1 << 8); // has mip map levels
 	public static final int FLAG_TWIDDLE = (1 << 9); // is twiddled
@@ -315,23 +312,9 @@ public abstract class PVRTexture extends Texture {
 			return this.mDataByteBuffer.getInt(12 * DataConstants.BYTES_PER_INT);
 		}
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public static enum PVRTextureFormat {
-		// ===========================================================
-		// Elements
-		// ===========================================================
 
 		RGBA_4444(0x10, false, PixelFormat.RGBA_4444),
 		RGBA_5551(0x11, false, PixelFormat.RGBA_5551),
@@ -345,14 +328,6 @@ public abstract class PVRTexture extends Texture {
 		//		PVRTC_4(0x19, GL10.GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG, true, TextureFormat.???),
 		//		BGRA_8888(0x1A, GL10.GL_RGBA, TextureFormat.???),
 		A_8(0x1B, false, PixelFormat.A_8);
-
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final int mID;
 		private final boolean mCompressed;
@@ -393,10 +368,6 @@ public abstract class PVRTexture extends Texture {
 			}
 		}
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
 		public int getID() {
 			return this.mID;
 		}
@@ -409,16 +380,5 @@ public abstract class PVRTexture extends Texture {
 			return this.mPixelFormat;
 		}
 
-		// ===========================================================
-		// Methods from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

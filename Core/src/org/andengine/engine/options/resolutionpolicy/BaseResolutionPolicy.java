@@ -10,25 +10,6 @@ import android.view.View.MeasureSpec;
  * @since 22:46:43 - 06.10.2010
  */
 public abstract class BaseResolutionPolicy implements IResolutionPolicy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	protected static void throwOnNotMeasureSpecEXACTLY(final int pWidthMeasureSpec, final int pHeightMeasureSpec) {
 		final int specWidthMode = MeasureSpec.getMode(pWidthMeasureSpec);
@@ -39,11 +20,4 @@ public abstract class BaseResolutionPolicy implements IResolutionPolicy {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

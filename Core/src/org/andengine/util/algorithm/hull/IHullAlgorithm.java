@@ -9,14 +9,6 @@ package org.andengine.util.algorithm.hull;
  * @since 13:46:22 - 14.09.2010
  */
 public interface IHullAlgorithm {
-	// ===========================================================
-	// Final Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	/**
 	 * @param pVertices a interleaved float[] containing vertex data.
 	 * @param pVertexCount the amount of vertices to look at in pVertices.

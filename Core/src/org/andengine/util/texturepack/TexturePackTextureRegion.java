@@ -11,13 +11,6 @@ import org.andengine.opengl.texture.region.TextureRegion;
  * @since 16:28:48 - 15.08.2011
  */
 public class TexturePackTextureRegion extends TextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final int mID;
 	private final String mSource;
@@ -31,7 +24,9 @@ public class TexturePackTextureRegion extends TextureRegion {
 	// Constructors
 	// ===========================================================
 
-	public TexturePackTextureRegion(final ITexture pTexture, final int pX, final int pY, final int pWidth, final int pHeight, final int pID, final String pSource, final boolean pRotated, final boolean pTrimmed, final int pSourceX, final int pSourceY, final int pSourceWidth, final int pSourceHeight) {
+	public TexturePackTextureRegion(final ITexture pTexture, final int pX, final int pY, final int pWidth, final int pHeight,
+                                    final int pID, final String pSource, final boolean pRotated, final boolean pTrimmed,
+                                    final int pSourceX, final int pSourceY, final int pSourceWidth, final int pSourceHeight) {
 		super(pTexture, pX, pY, pWidth, pHeight, pRotated);
 
 		this.mID = pID;
@@ -75,15 +70,4 @@ public class TexturePackTextureRegion extends TextureRegion {
 		return this.mSourceHeight;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

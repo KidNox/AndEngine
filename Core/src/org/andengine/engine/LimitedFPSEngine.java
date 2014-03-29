@@ -15,32 +15,15 @@ import org.andengine.util.time.TimeConstants;
  * @since 10:17:47 - 02.08.2010
  */
 public class LimitedFPSEngine extends Engine {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final long mPreferredFrameLengthNanoseconds;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public LimitedFPSEngine(final EngineOptions pEngineOptions, final int pFramesPerSecond) {
 		super(pEngineOptions);
 		this.mPreferredFrameLengthNanoseconds = TimeConstants.NANOSECONDS_PER_SECOND / pFramesPerSecond;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void onUpdate(final long pNanosecondsElapsed) throws InterruptedException {
@@ -57,11 +40,4 @@ public class LimitedFPSEngine extends Engine {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

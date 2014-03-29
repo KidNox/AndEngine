@@ -39,9 +39,6 @@ import android.util.SparseArray;
  * @since 17:54:59 - 01.11.2011
  */
 public class BitmapFont implements IFont {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	private static final String TAG_INFO = "info";
 	private static final int TAG_INFO_ATTRIBUTECOUNT = 11;
@@ -482,36 +479,17 @@ public class BitmapFont implements IFont {
 		return data.substring(attributeLength + 1);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
-
 	public static class BitmapFontOptions {
-		// ===========================================================
-		// Constants
-		// ===========================================================
 
 		public static final BitmapFontOptions DEFAULT = new BitmapFontOptions(0, 0);
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
 		private final int mTextureOffsetX;
 		private final int mTextureOffsetY;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public BitmapFontOptions(final int pTextureOffsetX, final int pTextureOffsetY) {
 			this.mTextureOffsetX = pTextureOffsetX;
 			this.mTextureOffsetY = pTextureOffsetY;
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
 
 		public int getTextureOffsetX() {
 			return this.mTextureOffsetX;
@@ -521,24 +499,9 @@ public class BitmapFont implements IFont {
 			return this.mTextureOffsetY;
 		}
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public class BitmapFontInfo {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
 		private static final int PADDING_LEFT_INDEX = 0;
 		private static final int PADDING_TOP_INDEX = BitmapFontInfo.PADDING_LEFT_INDEX + 1;
 		private static final int PADDING_RIGHT_INDEX = BitmapFontInfo.PADDING_TOP_INDEX + 1;
@@ -546,10 +509,6 @@ public class BitmapFont implements IFont {
 
 		private static final int SPACING_X_INDEX = 0;
 		private static final int SPACING_Y_INDEX = BitmapFontInfo.SPACING_X_INDEX + 1;
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final String mFace;
 		private final int mSize;
@@ -568,10 +527,6 @@ public class BitmapFont implements IFont {
 
 		private final int mSpacingX;
 		private final int mSpacingY;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public BitmapFontInfo(final String pData) throws FontException {
 			if(pData == null) {
@@ -609,10 +564,6 @@ public class BitmapFont implements IFont {
 			this.mSpacingX = Integer.parseInt(spacings[BitmapFontInfo.SPACING_X_INDEX]);
 			this.mSpacingY = Integer.parseInt(spacings[BitmapFontInfo.SPACING_Y_INDEX]);
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
 
 		public String getFace() {
 			return this.mFace;
@@ -674,34 +625,11 @@ public class BitmapFont implements IFont {
 			return this.mSpacingY;
 		}
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public class BitmapFontPage {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
 		private int mID;
 		private final ITexture mTexture;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public BitmapFontPage(final AssetManager pAssetManager, final String pAssetBasePath, final String pData) throws IOException {
 			final String[] pageAttributes = TextUtils.SPLITPATTERN_SPACE.split(pData, BitmapFont.TAG_PAGE_ATTRIBUTECOUNT + 1);
@@ -720,9 +648,6 @@ public class BitmapFont implements IFont {
 			this.mTexture = new BitmapTexture(BitmapFont.this.mTextureManager, new AssetInputStreamOpener(pAssetManager, assetPath), BitmapFont.this.mBitmapTextureFormat, BitmapFont.this.mTextureOptions);
 		}
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
 
 		public int getID() {
 			return this.mID;
@@ -732,16 +657,5 @@ public class BitmapFont implements IFont {
 			return this.mTexture;
 		}
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

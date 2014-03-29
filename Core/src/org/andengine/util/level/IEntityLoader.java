@@ -10,13 +10,5 @@ import org.xml.sax.Attributes;
  * @since 18:38:40 - 18.04.2012
  */
 public interface IEntityLoader {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public IEntity onLoadEntity(final String pEntityName, final Attributes pAttributes);
 }

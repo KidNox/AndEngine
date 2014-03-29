@@ -12,13 +12,6 @@ import org.andengine.util.modifier.util.ModifierUtils;
  * @since 19:39:25 - 19.03.2010
  */
 public class SequenceModifier<T> extends BaseModifier<T> implements IModifierListener<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private ISubSequenceModifierListener<T> mSubSequenceModifierListener;
 
@@ -177,14 +170,6 @@ public class SequenceModifier<T> extends BaseModifier<T> implements IModifierLis
 			this.onModifierFinished(pItem);
 		}
 	}
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 
 	public interface ISubSequenceModifierListener<T> {
 		public void onSubSequenceStarted(final IModifier<T> pModifier, final T pItem, final int pIndex);

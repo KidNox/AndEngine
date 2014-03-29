@@ -9,13 +9,6 @@ import org.andengine.opengl.texture.ITexture;
  * @since 20:07:17 - 07.08.2011
  */
 public interface ITextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public float getTextureX();
 	public float getTextureY();

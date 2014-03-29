@@ -23,29 +23,14 @@ import android.opengl.GLES20;
  * @since 14:42:18 - 15.11.2011
  */
 public class LowMemoryVertexBufferObject extends VertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected final FloatBuffer mFloatBuffer;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public LowMemoryVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
 		super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
 
 		this.mFloatBuffer = this.mByteBuffer.asFloatBuffer();
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public FloatBuffer getFloatBuffer() {
 		return this.mFloatBuffer;
@@ -61,20 +46,10 @@ public class LowMemoryVertexBufferObject extends VertexBufferObject {
 		return this.getByteCapacity();
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	protected void onBufferData() {
 		GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, this.mByteBuffer.limit(), this.mByteBuffer, this.mUsage);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

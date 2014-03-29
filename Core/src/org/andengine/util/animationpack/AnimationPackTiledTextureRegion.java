@@ -12,20 +12,8 @@ import org.andengine.opengl.texture.region.TiledTextureRegion;
  * @since 17:17:17 - 03.05.2012
  */
 public class AnimationPackTiledTextureRegion extends TiledTextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	private final String mAnimationName;
 	private final AnimationData mAnimationData;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public AnimationPackTiledTextureRegion(final String pAnimationName, final long[] pFrameDurations, final int pLoopCount, final ITexture pTexture, final ITextureRegion ... pTextureRegions) {
 		super(pTexture, pTextureRegions);
@@ -41,10 +29,6 @@ public class AnimationPackTiledTextureRegion extends TiledTextureRegion {
 		this.mAnimationData = new AnimationData(pFrameDurations, frames, pLoopCount);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
 	public String getAnimationName() {
 		return this.mAnimationName;
 	}
@@ -53,15 +37,4 @@ public class AnimationPackTiledTextureRegion extends TiledTextureRegion {
 		return this.mAnimationData;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

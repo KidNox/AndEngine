@@ -13,36 +13,14 @@ import org.andengine.util.math.MathUtils;
  * @since 18:07:35 - 09.07.2009
  */
 public class ProgressMonitor implements IProgressListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final ArrayList<IProgressListener> mProgressListeners = new ArrayList<IProgressListener>();
 	private final HashMap<ProgressMonitor, IProgressListener> mChildProgressMonitorToProgressListenerMap = new HashMap<ProgressMonitor, IProgressListener>();
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	public ProgressMonitor() {
-
-	}
 
 	public ProgressMonitor(final IProgressListener pProgressListener) {
 		this.mProgressListeners.add(pProgressListener);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void onProgressChanged(final int pProgress) {
@@ -52,9 +30,6 @@ public class ProgressMonitor implements IProgressListener {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void registerChildProgressMonitor(final ProgressMonitor pChildProgressMonitor, final int pChildProgressMonitorRangeFrom, final int pChildProgressMonitorRangeTo) {
 		final IProgressListener childProgressMonitorListener = new IProgressListener() {
@@ -80,7 +55,4 @@ public class ProgressMonitor implements IProgressListener {
 		this.mProgressListeners.add(pProgressListener);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -16,17 +16,6 @@ import org.andengine.opengl.texture.compressed.pvr.pixelbufferstrategy.IPVRTextu
  * @since 14:31:23 - 15.07.2011
  */
 public abstract class PVRGZTexture extends PVRTexture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public PVRGZTexture(final TextureManager pTextureManager, final PVRTextureFormat pPVRTextureFormat) throws IllegalArgumentException, IOException {
 		super(pTextureManager, pPVRTextureFormat);
@@ -60,24 +49,11 @@ public abstract class PVRGZTexture extends PVRTexture {
 		super(pTextureManager, pPVRTextureFormat, pPVRTexturePixelBufferStrategy, pTextureOptions, pTextureStateListener);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public GZIPInputStream getInputStream() throws IOException {
 		return new GZIPInputStream(this.onGetInputStream());
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

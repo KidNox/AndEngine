@@ -20,31 +20,12 @@ import android.opengl.GLES20;
  * @since 11:26:07 - 27.09.2011
  */
 public class SmartPVRTexturePixelBufferStrategy implements IPVRTexturePixelBufferStrategy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final int mAllocationSizeMaximum;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public SmartPVRTexturePixelBufferStrategy(final int pAllocationSizeMaximum) {
 		this.mAllocationSizeMaximum = pAllocationSizeMaximum;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public IPVRTexturePixelBufferStrategyBufferManager newPVRTexturePixelBufferStrategyManager(final PVRTexture pPVRTexture) throws IOException {
@@ -80,43 +61,16 @@ public class SmartPVRTexturePixelBufferStrategy implements IPVRTexturePixelBuffe
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
-
 	public static class SmartPVRTexturePixelBufferStrategyBufferManager implements IPVRTexturePixelBufferStrategyBufferManager {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final InputStream mInputStream;
 		private int mInputStreamPosition;
 
 		private byte[] mData;
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
 		public SmartPVRTexturePixelBufferStrategyBufferManager(final PVRTexture pPVRTexture) throws IOException {
 			this.mInputStream = pPVRTexture.getInputStream();
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
 
 		@Override
 		public ByteBuffer getPixelBuffer(final int pStart, final int pByteCount) throws IOException {
@@ -150,12 +104,5 @@ public class SmartPVRTexturePixelBufferStrategy implements IPVRTexturePixelBuffe
 			return ByteBuffer.wrap(this.mData, 0, pByteCount);
 		}
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

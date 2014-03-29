@@ -12,19 +12,8 @@ import android.view.View.MeasureSpec;
  * @since 11:23:00 - 29.03.2010
  */
 public class RatioResolutionPolicy extends BaseResolutionPolicy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final float mRatio;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public RatioResolutionPolicy(final float pRatio) {
 		this.mRatio = pRatio;
@@ -33,14 +22,6 @@ public class RatioResolutionPolicy extends BaseResolutionPolicy {
 	public RatioResolutionPolicy(final float pWidthRatio, final float pHeightRatio) {
 		this.mRatio = pWidthRatio / pHeightRatio;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void onMeasure(final RenderSurfaceView pRenderSurfaceView, final int pWidthMeasureSpec, final int pHeightMeasureSpec) {
@@ -65,11 +46,4 @@ public class RatioResolutionPolicy extends BaseResolutionPolicy {
 		pRenderSurfaceView.setMeasuredDimensionProxy(measuredWidth, measuredHeight);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

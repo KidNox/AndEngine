@@ -12,29 +12,6 @@ import org.andengine.util.Constants;
  * @since 11:50:19 - 11.03.2010
  */
 public class ShapeCollisionChecker extends BaseCollisionChecker {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	/**
 	 * Calls through to {@link ShapeCollisionChecker#checkCollisionSub(float[], int, int, int, int, int, float[], int, int, int, int)} with the default parameters internally used by different AndEngine primitives.
@@ -174,7 +151,4 @@ public class ShapeCollisionChecker extends BaseCollisionChecker {
 		return odd;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

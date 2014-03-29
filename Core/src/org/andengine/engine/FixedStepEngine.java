@@ -15,33 +15,14 @@ import org.andengine.util.time.TimeConstants;
  * @since 10:17:47 - 02.08.2010
  */
 public class FixedStepEngine extends Engine {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final long mStepLength;
 	private long mSecondsElapsedAccumulator;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public FixedStepEngine(final EngineOptions pEngineOptions, final int pStepsPerSecond) {
 		super(pEngineOptions);
 		this.mStepLength = TimeConstants.NANOSECONDS_PER_SECOND / pStepsPerSecond;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void onUpdate(final long pNanosecondsElapsed) throws InterruptedException {
@@ -54,11 +35,4 @@ public class FixedStepEngine extends Engine {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

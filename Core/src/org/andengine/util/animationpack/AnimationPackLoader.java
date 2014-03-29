@@ -24,37 +24,15 @@ import android.content.res.AssetManager;
  * @since 17:05:15 - 29.07.2011
  */
 public class AnimationPackLoader {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final AssetManager mAssetManager;
 	private final TextureManager mTextureManager;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public AnimationPackLoader(final AssetManager pAssetManager, final TextureManager pTextureManager) {
 		this.mAssetManager = pAssetManager;
 		this.mTextureManager = pTextureManager;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public AnimationPack loadFromAsset(final String pAssetPath, final String pAssetBasePath) throws AnimationPackParseException {
 		try {
@@ -88,7 +66,4 @@ public class AnimationPackLoader {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

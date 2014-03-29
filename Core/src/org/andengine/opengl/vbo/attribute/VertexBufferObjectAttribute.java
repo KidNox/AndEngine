@@ -9,13 +9,6 @@ import android.opengl.GLES20;
  * @since 13:57:13 - 15.08.2011
  */
 public class VertexBufferObjectAttribute {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	/* package */ final int mLocation;
 	/* package */ final String mName;
@@ -73,11 +66,4 @@ public class VertexBufferObjectAttribute {
 		GLES20.glVertexAttribPointer(this.mLocation, this.mSize, this.mType, this.mNormalized, pStride, this.mOffset);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

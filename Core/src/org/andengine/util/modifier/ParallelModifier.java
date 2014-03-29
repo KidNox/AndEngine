@@ -13,23 +13,12 @@ import org.andengine.util.modifier.IModifier.IModifierListener;
  * @param <T>
  */
 public class ParallelModifier<T> extends BaseModifier<T> implements IModifierListener<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private float mSecondsElapsed;
 	private final float mDuration;
 
 	private final IModifier<T>[] mModifiers;
 	private boolean mFinishedCached;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public ParallelModifier(final IModifier<T> ... pModifiers) throws IllegalArgumentException {
 		this(null, pModifiers);
@@ -138,11 +127,4 @@ public class ParallelModifier<T> extends BaseModifier<T> implements IModifierLis
 		this.onModifierFinished(pItem);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

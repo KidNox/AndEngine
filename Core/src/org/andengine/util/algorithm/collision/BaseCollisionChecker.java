@@ -8,29 +8,6 @@ package org.andengine.util.algorithm.collision;
  * @since 11:50:19 - 11.03.2010
  */
 public class BaseCollisionChecker {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static boolean checkAxisAlignedRectangleCollision(final float pLeftA, final float pTopA, final float pRightA, final float pBottomA, final float pLeftB, final float pTopB, final float pRightB, final float pBottomB) {
 		return pLeftA < pRightB &&
@@ -116,7 +93,4 @@ public class BaseCollisionChecker {
 		return (ccw < 0.0f) ? -1 : ((ccw > 0.0f) ? 1 : 0);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

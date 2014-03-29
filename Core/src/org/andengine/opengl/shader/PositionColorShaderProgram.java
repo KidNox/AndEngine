@@ -58,9 +58,6 @@ public class PositionColorShaderProgram extends ShaderProgram {
 		return PositionColorShaderProgram.INSTANCE;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
@@ -92,11 +89,4 @@ public class PositionColorShaderProgram extends ShaderProgram {
 		super.unbind(pGLState);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -16,35 +16,16 @@ import org.xml.sax.helpers.DefaultHandler;
  * @since 14:35:32 - 11.10.2010
  */
 public class LevelParser extends DefaultHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final IEntityLoader mDefaultEntityLoader;
 	private final HashMap<String, IEntityLoader> mEntityLoaders;
 
 	private SmartList<IEntity> mParentEntityStack = new SmartList<IEntity>();
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
 	public LevelParser(final IEntityLoader pDefaultEntityLoader, final HashMap<String, IEntityLoader> pEntityLoaders) {
 		this.mDefaultEntityLoader = pDefaultEntityLoader;
 		this.mEntityLoaders = pEntityLoaders;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void startElement(final String pUri, final String pLocalName, final String pQualifiedName, final Attributes pAttributes) throws SAXException {
@@ -74,12 +55,4 @@ public class LevelParser extends DefaultHandler {
 	public void endElement(final String pUri, final String pLocalName, final String pQualifiedName) throws SAXException {
 		this.mParentEntityStack.removeLast();
 	}
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

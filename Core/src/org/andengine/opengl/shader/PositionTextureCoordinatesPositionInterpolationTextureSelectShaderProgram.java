@@ -62,10 +62,6 @@ public class PositionTextureCoordinatesPositionInterpolationTextureSelectShaderP
 	}
 
 	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
 	// ===========================================================
 
@@ -108,11 +104,4 @@ public class PositionTextureCoordinatesPositionInterpolationTextureSelectShaderP
 		super.unbind(pGLState);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

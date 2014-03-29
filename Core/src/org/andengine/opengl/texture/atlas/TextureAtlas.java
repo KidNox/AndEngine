@@ -17,14 +17,6 @@ import org.andengine.opengl.texture.atlas.source.ITextureAtlasSource;
  * @since 14:22:55 - 14.07.2011
  */
 public abstract class TextureAtlas<T extends ITextureAtlasSource> extends Texture implements ITextureAtlas<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	protected final int mWidth;
 	protected final int mHeight;
 
@@ -168,7 +160,4 @@ public abstract class TextureAtlas<T extends ITextureAtlasSource> extends Textur
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

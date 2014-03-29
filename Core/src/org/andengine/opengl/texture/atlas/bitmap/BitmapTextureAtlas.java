@@ -27,13 +27,6 @@ import android.opengl.GLUtils;
  * @since 14:55:02 - 08.03.2010
  */
 public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final BitmapTextureFormat mBitmapTextureFormat;
 
@@ -188,7 +181,4 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

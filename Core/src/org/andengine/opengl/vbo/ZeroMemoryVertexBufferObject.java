@@ -29,13 +29,6 @@ import android.opengl.GLES20;
  * @since 19:03:32 - 10.02.2012
  */
 public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected final int mCapacity;
 	protected final boolean mAutoDispose;
@@ -242,7 +235,4 @@ public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObjec
 		BufferUtils.freeDirectByteBuffer(byteBuffer);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

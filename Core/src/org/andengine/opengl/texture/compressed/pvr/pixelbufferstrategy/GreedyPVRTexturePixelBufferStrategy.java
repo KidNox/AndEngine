@@ -17,25 +17,6 @@ import android.opengl.GLES20;
  * @since 11:26:07 - 27.09.2011
  */
 public class GreedyPVRTexturePixelBufferStrategy implements IPVRTexturePixelBufferStrategy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public IPVRTexturePixelBufferStrategyBufferManager newPVRTexturePixelBufferStrategyManager(final PVRTexture pPVRTexture) throws IOException {
@@ -51,40 +32,13 @@ public class GreedyPVRTexturePixelBufferStrategy implements IPVRTexturePixelBuff
 		GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, pLevel, pPixelFormat.getGLInternalFormat(), pWidth, pHeight, 0, pPixelFormat.getGLFormat(), pPixelFormat.getGLType(), pixelBuffer);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
-
 	public static class GreedyPVRTexturePixelBufferStrategyBufferManager implements IPVRTexturePixelBufferStrategyBufferManager {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final ByteBuffer mByteBuffer;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public GreedyPVRTexturePixelBufferStrategyBufferManager(final PVRTexture pPVRTexture) throws IOException {
 			this.mByteBuffer = pPVRTexture.getPVRTextureBuffer();
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
 
 		@Override
 		public ByteBuffer getPixelBuffer(final int pStart, final int pByteCount) {
@@ -94,12 +48,5 @@ public class GreedyPVRTexturePixelBufferStrategy implements IPVRTexturePixelBuff
 			return this.mByteBuffer.slice();
 		}
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

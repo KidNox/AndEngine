@@ -14,9 +14,6 @@ import android.opengl.Matrix;
  * @since 14:49:23 - 04.08.2011
  */
 public class GLMatrixStack {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	public static final int GLMATRIXSTACK_DEPTH_MAX = 32;
 	public static final int GLMATRIX_SIZE = 16;
@@ -24,42 +21,18 @@ public class GLMatrixStack {
 	private static final int GLMATRIXSTACKOFFSET_UNDERFLOW = -1 * GLMatrixStack.GLMATRIX_SIZE;
 	private static final int GLMATRIXSTACKOFFSET_OVERFLOW = GLMatrixStack.GLMATRIXSTACK_DEPTH_MAX * GLMatrixStack.GLMATRIX_SIZE;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	final float[] mMatrixStack = new float[GLMatrixStack.GLMATRIXSTACK_DEPTH_MAX * GLMatrixStack.GLMATRIX_SIZE];
 	int mMatrixStackOffset;
 
 	private final float[] mTemp = new float[2 * GLMatrixStack.GLMATRIX_SIZE];
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
 	public GLMatrixStack() {
 		this.glLoadIdentity();
 	}
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
 	public void getMatrix(final float[] pMatrix) {
 		System.arraycopy(this.mMatrixStack, this.mMatrixStackOffset, pMatrix, 0, GLMatrixStack.GLMATRIX_SIZE);
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void glLoadIdentity() {
 		Matrix.setIdentityM(this.mMatrixStack, this.mMatrixStackOffset);
@@ -112,7 +85,7 @@ public class GLMatrixStack {
 	}
 
 	private static void setSkewM(final float[] pMatrixStack, final int pOffset, final float pSkewX, final float pSkewY) {
-		pMatrixStack[pOffset + 0] = 1.0f;
+		pMatrixStack[pOffset] = 1.0f;
 		pMatrixStack[pOffset + 1] = (float) Math.tan(-MathConstants.DEG_TO_RAD * pSkewY);
 		pMatrixStack[pOffset + 2] = 0.0f;
 		pMatrixStack[pOffset + 3] = 0.0f;
@@ -138,74 +111,18 @@ public class GLMatrixStack {
 	// ===========================================================
 
 	public static class GLMatrixStackOverflowException extends AndEngineRuntimeException {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
 		private static final long serialVersionUID = -800847781599300100L;
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public GLMatrixStackOverflowException() {
 
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public static class GLMatrixStackUnderflowException extends AndEngineRuntimeException {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
 		private static final long serialVersionUID = -3268021423136372954L;
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public GLMatrixStackUnderflowException() {
 
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

@@ -20,24 +20,14 @@ import org.andengine.util.adt.queue.IQueue;
  * @since 15:02:40 - 24.02.2012
  */
 public class ShiftList<T> implements IQueue<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final int CAPACITY_INITIAL_DEFAULT = 1;
 	private static final int INDEX_INVALID = -1;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected Object[] mItems;
 	protected int mHead;
 	protected int mTail;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public ShiftList() {
 		this(ShiftList.CAPACITY_INITIAL_DEFAULT);
@@ -47,13 +37,6 @@ public class ShiftList<T> implements IQueue<T> {
 		this.mItems = new Object[pInitialCapacity];
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public boolean isEmpty() {
@@ -320,7 +303,4 @@ public class ShiftList<T> implements IQueue<T> {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

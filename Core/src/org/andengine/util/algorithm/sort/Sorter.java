@@ -14,33 +14,10 @@ import org.andengine.util.adt.list.IList;
  * @param <T>
  */
 public abstract class Sorter<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	public abstract void sort(final T[] pArray, final int pStart, final int pEnd, final Comparator<T> pComparator);
 	public abstract void sort(final List<T> pList, final int pStart, final int pEnd, final Comparator<T> pComparator);
 	public abstract void sort(final IList<T> pList, final int pStart, final int pEnd, final Comparator<T> pComparator);
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public final void sort(final T[] pArray, final Comparator<T> pComparator){
 		this.sort(pArray, 0, pArray.length, pComparator);
@@ -54,7 +31,4 @@ public abstract class Sorter<T> {
 		this.sort(pList, 0, pList.size(), pComparator);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

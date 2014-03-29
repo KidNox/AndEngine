@@ -9,14 +9,6 @@ package org.andengine.util.call;
  * @param <T>
  */
 public interface AsyncCallable<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	/**
 	 * Computes a result asynchronously, return values and exceptions are to be handled through the callbacks.
 	 * This method is expected to return almost immediately, after starting a {@link Thread} or similar.

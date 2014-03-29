@@ -22,13 +22,6 @@ import android.opengl.GLES20;
  * @since 14:22:56 - 07.04.2010
  */
 public abstract class VertexBufferObject implements IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected final int mCapacity;
 	protected final boolean mAutoDispose;
@@ -211,16 +204,10 @@ public abstract class VertexBufferObject implements IVertexBufferObject {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	private void loadToHardware(final GLState pGLState) {
 		this.mHardwareBufferID = pGLState.generateBuffer();
 		this.mDirtyOnHardware = true;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

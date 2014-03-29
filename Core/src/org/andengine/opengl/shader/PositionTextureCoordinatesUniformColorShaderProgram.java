@@ -14,10 +14,6 @@ import android.opengl.GLES20;
  * @since 15:00:46 - 13.02.2012
  */
 public class PositionTextureCoordinatesUniformColorShaderProgram extends ShaderProgram {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static PositionTextureCoordinatesUniformColorShaderProgram INSTANCE;
 
 	public static final String VERTEXSHADER =
@@ -63,10 +59,6 @@ public class PositionTextureCoordinatesUniformColorShaderProgram extends ShaderP
 	}
 
 	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
 	// ===========================================================
 
@@ -99,11 +91,4 @@ public class PositionTextureCoordinatesUniformColorShaderProgram extends ShaderP
 		super.unbind(pGLState);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

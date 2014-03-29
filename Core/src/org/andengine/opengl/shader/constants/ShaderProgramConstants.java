@@ -7,10 +7,6 @@ package org.andengine.opengl.shader.constants;
  * @since 01:03:16 - 07.08.2011
  */
 public interface ShaderProgramConstants {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	public static final int LOCATION_INVALID = -1;
 
 	public static final String ATTRIBUTE_POSITION = "a_position";
@@ -53,7 +49,4 @@ public interface ShaderProgramConstants {
 	public static final String VARYING_TEXTURECOORDINATES = "v_textureCoordinates";
 	public static final String VARYING_COLOR = "v_color";
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 }

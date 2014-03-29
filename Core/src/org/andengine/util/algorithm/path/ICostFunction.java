@@ -8,13 +8,5 @@ package org.andengine.util.algorithm.path;
  * @since 23:00:24 - 16.08.2010
  */
 public interface ICostFunction<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	public float getCost(final IPathFinderMap<T> pPathFinderMap, final int pFromX, final int pFromY, final int pToX, final int pToY, final T pEntity);
 }

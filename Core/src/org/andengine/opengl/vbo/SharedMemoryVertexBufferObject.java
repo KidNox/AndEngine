@@ -23,9 +23,6 @@ import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
  * @since 19:22:13 - 10.02.2012
  */
 public abstract class SharedMemoryVertexBufferObject extends ZeroMemoryVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	private static ReentrantLock sSharedByteBufferLock = new ReentrantLock(true);
 	private static ByteBuffer sSharedByteBuffer;
@@ -48,25 +45,11 @@ public abstract class SharedMemoryVertexBufferObject extends ZeroMemoryVertexBuf
 		return byteCapacity;
 	}
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public SharedMemoryVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
 		super(pVertexBufferObjectManager, pCapacity, pDrawType, false, pVertexBufferObjectAttributes);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void dispose() {
@@ -110,11 +93,4 @@ public abstract class SharedMemoryVertexBufferObject extends ZeroMemoryVertexBuf
 		SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

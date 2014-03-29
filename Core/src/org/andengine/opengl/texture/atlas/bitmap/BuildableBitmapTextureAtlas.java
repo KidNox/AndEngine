@@ -15,17 +15,6 @@ import org.andengine.opengl.texture.bitmap.BitmapTextureFormat;
  * @since 15:51:46 - 12.07.2011
  */
 public class BuildableBitmapTextureAtlas extends BuildableTextureAtlas<IBitmapTextureAtlasSource, BitmapTextureAtlas> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	/**
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
@@ -94,19 +83,4 @@ public class BuildableBitmapTextureAtlas extends BuildableTextureAtlas<IBitmapTe
 		super(new BitmapTextureAtlas(pTextureManager, pWidth, pHeight, pBitmapTextureFormat, pTextureOptions, pTextureStateListener));
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

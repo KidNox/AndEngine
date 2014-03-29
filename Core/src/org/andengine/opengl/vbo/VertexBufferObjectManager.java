@@ -12,25 +12,10 @@ import org.andengine.opengl.util.GLState;
  * @since 17:48:46 - 08.03.2010
  */
 public class VertexBufferObjectManager {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final ArrayList<IVertexBufferObject> mVertexBufferObjectsLoaded = new ArrayList<IVertexBufferObject>();
 
 	private final ArrayList<IVertexBufferObject> mVertexBufferObjectsToBeUnloaded = new ArrayList<IVertexBufferObject>();
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public synchronized int getHeapMemoryByteSize() {
 		int byteSize = 0;
@@ -58,14 +43,6 @@ public class VertexBufferObjectManager {
 		}
 		return byteSize;
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void onCreate() {
 
@@ -113,7 +90,4 @@ public class VertexBufferObjectManager {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

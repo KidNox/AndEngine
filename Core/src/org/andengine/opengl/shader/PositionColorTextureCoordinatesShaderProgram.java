@@ -64,9 +64,6 @@ public class PositionColorTextureCoordinatesShaderProgram extends ShaderProgram 
 		return PositionColorTextureCoordinatesShaderProgram.INSTANCE;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
@@ -92,11 +89,4 @@ public class PositionColorTextureCoordinatesShaderProgram extends ShaderProgram 
 		GLES20.glUniform1i(PositionColorTextureCoordinatesShaderProgram.sUniformTexture0Location, 0);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

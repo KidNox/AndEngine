@@ -189,7 +189,7 @@ public class ConfigChooser implements GLSurfaceView.EGLConfigChooser {
 	// ===========================================================
 
 	private static int getEGLConfigCount(final EGL10 pEGL, final EGLDisplay pEGLDisplay, final int[] pEGLConfigAttributes) {
-		if(pEGL.eglChooseConfig(pEGLDisplay, pEGLConfigAttributes, null, 0, ConfigChooser.BUFFER) == false) {
+		if(!pEGL.eglChooseConfig(pEGLDisplay, pEGLConfigAttributes, null, 0, ConfigChooser.BUFFER)) {
 			throw new IllegalArgumentException("EGLCONFIG_FALLBACK failed!");
 		}
 		return ConfigChooser.BUFFER[0];
@@ -286,34 +286,6 @@ public class ConfigChooser implements GLSurfaceView.EGLConfigChooser {
 			}
 		};
 
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
 		public abstract boolean matches(final int pRedSize, final int pGreenSize, final int pBlueSize, final int pAlphaSize, final int pDepthSize, final int pStencilSize);
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

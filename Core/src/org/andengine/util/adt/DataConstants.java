@@ -8,10 +8,6 @@ package org.andengine.util.adt;
  * @since 17:59:55 - 14.07.2011
  */
 public interface DataConstants {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	public static final int BYTES_PER_BYTE = 1;
 	public static final int BYTES_PER_SHORT = Short.SIZE / Byte.SIZE;
 	public static final int BYTES_PER_INT = Integer.SIZE / Byte.SIZE;
@@ -38,7 +34,4 @@ public interface DataConstants {
 	public static final int BITS_PER_FLOAT = BYTES_PER_FLOAT * BITS_PER_BYTE;
 	public static final int BITS_PER_DOUBLE = BYTES_PER_DOUBLE * BITS_PER_BYTE;
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 }

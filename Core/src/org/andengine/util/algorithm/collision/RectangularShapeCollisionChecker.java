@@ -16,35 +16,12 @@ import org.andengine.util.math.MathUtils;
  * @since 11:50:19 - 11.03.2010
  */
 public class RectangularShapeCollisionChecker extends ShapeCollisionChecker {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	public static final int RECTANGULARSHAPE_VERTEX_COUNT = 4;
 
 	private static final float[] VERTICES_CONTAINS_TMP = new float[2 * RectangularShapeCollisionChecker.RECTANGULARSHAPE_VERTEX_COUNT];
 	private static final float[] VERTICES_COLLISION_TMP_A = new float[2 * RectangularShapeCollisionChecker.RECTANGULARSHAPE_VERTEX_COUNT];
 	private static final float[] VERTICES_COLLISION_TMP_B = new float[2 * RectangularShapeCollisionChecker.RECTANGULARSHAPE_VERTEX_COUNT];
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 	
 	public static boolean checkContains(final float pLocalX, final float pLocalY, final float pLocalWidth, final float pLocalHeight, final Transformation pLocalToSceneTransformation, final float pX, final float pY) {
 		RectangularShapeCollisionChecker.fillVertices(pLocalX, pLocalY, pLocalWidth, pLocalHeight, pLocalToSceneTransformation, RectangularShapeCollisionChecker.VERTICES_CONTAINS_TMP);
@@ -101,29 +78,27 @@ public class RectangularShapeCollisionChecker extends ShapeCollisionChecker {
 	}
 
 	public static void fillVertices(final float pLocalX, final float pLocalY, final float pLocalWidth, final float pLocalHeight, final Transformation pLocalToSceneTransformation, final float[] pVertices) {
-		final float localXMin = pLocalX;
-		final float localXMax = pLocalX + pLocalWidth;
-		final float localYMin = pLocalY;
-		final float localYMax = pLocalY + pLocalHeight;
+        final float localXMax = pLocalX + pLocalWidth;
+        final float localYMax = pLocalY + pLocalHeight;
 
-		pVertices[0 + Constants.VERTEX_INDEX_X] = localXMin;
-		pVertices[0 + Constants.VERTEX_INDEX_Y] = localYMin;
+		pVertices[Constants.VERTEX_INDEX_X] = pLocalX;
+		pVertices[Constants.VERTEX_INDEX_Y] = pLocalY;
 
 		pVertices[2 + Constants.VERTEX_INDEX_X] = localXMax;
-		pVertices[2 + Constants.VERTEX_INDEX_Y] = localYMin;
+		pVertices[2 + Constants.VERTEX_INDEX_Y] = pLocalY;
 
 		pVertices[4 + Constants.VERTEX_INDEX_X] = localXMax;
 		pVertices[4 + Constants.VERTEX_INDEX_Y] = localYMax;
 
-		pVertices[6 + Constants.VERTEX_INDEX_X] = localXMin;
+		pVertices[6 + Constants.VERTEX_INDEX_X] = pLocalX;
 		pVertices[6 + Constants.VERTEX_INDEX_Y] = localYMax;
 
 		pLocalToSceneTransformation.transform(pVertices);
 	}
 
 	private static void fillVertices(final Camera pCamera, final float[] pVertices) {
-		pVertices[0 + Constants.VERTEX_INDEX_X] = pCamera.getXMin();
-		pVertices[0 + Constants.VERTEX_INDEX_Y] = pCamera.getYMin();
+		pVertices[Constants.VERTEX_INDEX_X] = pCamera.getXMin();
+		pVertices[Constants.VERTEX_INDEX_Y] = pCamera.getYMin();
 
 		pVertices[2 + Constants.VERTEX_INDEX_X] = pCamera.getXMax();
 		pVertices[2 + Constants.VERTEX_INDEX_Y] = pCamera.getYMin();
@@ -137,7 +112,5 @@ public class RectangularShapeCollisionChecker extends ShapeCollisionChecker {
 		MathUtils.rotateAroundCenter(pVertices, pCamera.getRotation(), pCamera.getCenterX(), pCamera.getCenterY());
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+
 }

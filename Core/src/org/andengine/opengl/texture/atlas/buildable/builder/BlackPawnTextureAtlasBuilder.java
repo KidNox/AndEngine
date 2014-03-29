@@ -99,22 +99,7 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
-
 	protected static class Rect {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final int mLeft;
 		private final int mTop;
@@ -160,32 +145,14 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
 			return this.mTop + this.mHeight;
 		}
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
 		@Override
 		public String toString() {
 			return "@: " + this.mLeft + "/" + this.mTop + " * " + this.mWidth + "x" + this.mHeight;
 		}
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	protected static class Node {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private Node mChildA;
 		private Node mChildB;
@@ -219,14 +186,6 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
 		public Node getChildB() {
 			return this.mChildB;
 		}
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
 
 		public Node insert(final ITextureAtlasSource pTextureAtlasSource, final int pTextureWidth, final int pTextureHeight, final int pTextureAtlasSourceSpacing, final int pTextureAtlasSourcePadding) throws IllegalArgumentException {
 			if(this.mChildA != null && this.mChildB != null) {
@@ -285,14 +244,11 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
 				}
 
 				if(fitToBottomWithoutSpacing) {
-					if(textureSourceWidthWithSpacing == rectWidth) {
-						this.mTextureAtlasSource = pTextureAtlasSource;
-						return this;
-					} else if(textureSourceWidthWithSpacing > rectWidth) {
-						return null;
-					} else {
-						return this.createChildren(pTextureAtlasSource, pTextureWidth, pTextureHeight, pTextureAtlasSourceSpacing, pTextureAtlasSourcePadding, rectWidth - textureSourceWidthWithSpacing, rectHeight - textureSourceHeight);
-					}
+                    if(textureSourceWidthWithSpacing > rectWidth) {
+                        return null;
+                    } else {
+                        return this.createChildren(pTextureAtlasSource, pTextureWidth, pTextureHeight, pTextureAtlasSourceSpacing, pTextureAtlasSourcePadding, rectWidth - textureSourceWidthWithSpacing, rectHeight - textureSourceHeight);
+                    }
 				} else if(textureSourceWidthWithSpacing > rectWidth || textureSourceHeightWithSpacing > rectHeight) {
 					return null;
 				} else {
@@ -339,8 +295,5 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
 			return this.mChildA.insert(pTextureAtlasSource, pTextureWidth, pTextureHeight, pTextureAtlasSourceSpacing, pTextureAtlasSourcePadding);
 		}
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

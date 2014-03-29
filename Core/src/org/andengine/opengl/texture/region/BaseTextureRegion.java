@@ -10,19 +10,7 @@ import org.andengine.opengl.texture.ITexture;
  * @since 14:29:59 - 08.03.2010
  */
 public abstract class BaseTextureRegion implements ITextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
 	protected final ITexture mTexture;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public BaseTextureRegion(final ITexture pTexture) {
 		this.mTexture = pTexture;
@@ -31,24 +19,9 @@ public abstract class BaseTextureRegion implements ITextureRegion {
 	@Override
 	public abstract ITextureRegion deepCopy();
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
 	@Override
 	public ITexture getTexture() {
 		return this.mTexture;
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

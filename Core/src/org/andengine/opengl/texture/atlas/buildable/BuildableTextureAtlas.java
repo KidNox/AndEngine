@@ -22,32 +22,13 @@ import org.andengine.util.call.Callback;
  * @since 21:26:38 - 12.08.2010
  */
 public class BuildableTextureAtlas<S extends ITextureAtlasSource, T extends ITextureAtlas<S>> implements IBuildableTextureAtlas<S, T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final T mTextureAtlas;
 	private final ArrayList<TextureAtlasSourceWithWithLocationCallback<S>> mTextureAtlasSourcesToPlace = new ArrayList<TextureAtlasSourceWithWithLocationCallback<S>>();
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
 	public BuildableTextureAtlas(final T pTextureAtlas) {
 		this.mTextureAtlas = pTextureAtlas;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public int getWidth() {
@@ -204,9 +185,6 @@ public class BuildableTextureAtlas<S extends ITextureAtlasSource, T extends ITex
 		this.mTextureAtlas.setTextureAtlasStateListener(pTextureAtlasStateListener);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	@Override
 	public void addEmptyTextureAtlasSource(final int pTextureX, final int pTextureY, final int pWidth, final int pHeight) {
@@ -245,13 +223,6 @@ public class BuildableTextureAtlas<S extends ITextureAtlasSource, T extends ITex
 	// ===========================================================
 
 	public static class TextureAtlasSourceWithWithLocationCallback<T extends ITextureAtlasSource> {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private final T mTextureAtlasSource;
 		private final Callback<T> mCallback;
@@ -276,17 +247,5 @@ public class BuildableTextureAtlas<S extends ITextureAtlasSource, T extends ITex
 		public Callback<T> getCallback() {
 			return this.mCallback;
 		}
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

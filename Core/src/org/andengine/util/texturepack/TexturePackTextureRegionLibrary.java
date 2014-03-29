@@ -11,29 +11,15 @@ import android.util.SparseArray;
  * @since 16:34:23 - 15.08.2011
  */
 public class TexturePackTextureRegionLibrary {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final SparseArray<TexturePackTextureRegion> mIDMapping;
 	private final HashMap<String, TexturePackTextureRegion> mSourceMapping;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public TexturePackTextureRegionLibrary(final int pInitialCapacity) {
 		this.mIDMapping = new SparseArray<TexturePackTextureRegion>(pInitialCapacity);
 		this.mSourceMapping = new HashMap<String, TexturePackTextureRegion>(pInitialCapacity);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public SparseArray<TexturePackTextureRegion> getIDMapping() {
 		return this.mIDMapping;
@@ -42,14 +28,6 @@ public class TexturePackTextureRegionLibrary {
 	public HashMap<String, TexturePackTextureRegion> getSourceMapping() {
 		return this.mSourceMapping;
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void put(final TexturePackTextureRegion pTexturePackTextureRegion) {
 		this.throwOnCollision(pTexturePackTextureRegion);
@@ -92,7 +70,4 @@ public class TexturePackTextureRegionLibrary {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

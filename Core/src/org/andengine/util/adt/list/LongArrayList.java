@@ -9,22 +9,11 @@ package org.andengine.util.adt.list;
  * @since 19:35:59 - 03.05.2012
  */
 public class LongArrayList implements ILongList {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final int CAPACITY_INITIAL_DEFAULT = 0;
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private long[] mItems;
 	private int mSize;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public LongArrayList() {
 		this(LongArrayList.CAPACITY_INITIAL_DEFAULT);
@@ -33,14 +22,6 @@ public class LongArrayList implements ILongList {
 	public LongArrayList(final int pInitialCapacity) {
 		this.mItems = new long[pInitialCapacity];
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public boolean isEmpty() {
@@ -101,9 +82,6 @@ public class LongArrayList implements ILongList {
 		return array ;
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	private void ensureCapacity(final int pCapacity) {
 		final int currentCapacity = this.mItems.length;
@@ -116,7 +94,4 @@ public class LongArrayList implements ILongList {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

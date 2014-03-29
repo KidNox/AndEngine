@@ -15,19 +15,8 @@ import org.andengine.util.math.MathUtils;
  * TODO min/max(X/Y) values could be cached and only updated once the zoomfactor/center changed.
  */
 public class ZoomCamera extends BoundCamera {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected float mZoomFactor = 1.0f;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public ZoomCamera(final float pX, final float pY, final float pWidth, final float pHeight) {
 		super(pX, pY, pWidth, pHeight);
@@ -153,11 +142,4 @@ public class ZoomCamera extends BoundCamera {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

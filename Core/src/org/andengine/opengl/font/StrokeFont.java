@@ -18,22 +18,11 @@ import android.util.FloatMath;
  * @since 10:39:33 - 03.04.2010
  */
 public class StrokeFont extends Font {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final Paint mStrokePaint;
 	private final boolean mStrokeOnly;
 	private final float mStrokeWidth;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-	
 	public StrokeFont(final FontManager pFontManager, final ITexture pTexture, final Typeface pTypeface, final float pSize, final boolean pAntiAlias, final Color pColor, final float pStrokeWidth, final Color pStrokeColor) {
 		this(pFontManager, pTexture, pTypeface, pSize, pAntiAlias, pColor.getARGBPackedInt(), pStrokeWidth, pStrokeColor.getARGBPackedInt());
 	}
@@ -62,14 +51,6 @@ public class StrokeFont extends Font {
 		this.mStrokeOnly = pStrokeOnly;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
 	@Override
 	protected void updateTextBounds(final String pCharacterAsString) {
 		this.mStrokePaint.getTextBounds(pCharacterAsString, 0, 1, this.mTextBounds);
@@ -85,11 +66,4 @@ public class StrokeFont extends Font {
 		this.mCanvas.drawText(pCharacterAsString, pLeft + Font.LETTER_TEXTURE_PADDING, pTop + Font.LETTER_TEXTURE_PADDING, this.mStrokePaint);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

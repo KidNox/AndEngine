@@ -3,7 +3,6 @@ package andengine.aeexamples.launcher;
 import java.util.Arrays;
 
 import andengine.aeexamples.R;
-import org.andengine.AndEngine;
 import org.andengine.util.debug.Debug;
 
 import android.app.AlertDialog;
@@ -19,7 +18,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
+import org.andengine.util.system.Support;
 
 
 /**
@@ -60,7 +59,7 @@ public class ExampleLauncher extends ExpandableListActivity {
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		if(!AndEngine.isDeviceSupported()) {
+		if(!Support.isDeviceSupported()) {
 			this.showDialog(ExampleLauncher.DIALOG_DEVICE_NOT_SUPPORTED);
 		}
 
@@ -135,7 +134,7 @@ public class ExampleLauncher extends ExpandableListActivity {
 				final StringBuilder sb = new StringBuilder();
 				for(int i = versionDescriptions.length - 1; i >= versionDescriptionsStartIndex; i--) {
 					sb.append("--------------------------\n");
-					sb.append(">>>  Version: " + versionCodes[i] + "\n");
+					sb.append(">>>  Version: ").append(versionCodes[i]).append("\n");
 					sb.append("--------------------------\n");
 					sb.append(versionDescriptions[i]);
 

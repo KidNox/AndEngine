@@ -11,13 +11,6 @@ import android.util.SparseArray;
  * @since 12:19:22 - 08.12.2011
  */
 public class IntLRUCache<V> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final int mCapacity;
 	private int mSize;
@@ -122,88 +115,21 @@ public class IntLRUCache<V> {
 	}
 
 	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
 	// Inner and Anonymous Classes
 	// ===========================================================
 
 	static class IntLRUCacheQueueNode {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
 		int mKey;
 		IntLRUCacheQueueNode mPrevious;
 		IntLRUCacheQueueNode mNext;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	static class IntLRUCacheValueHolder<V> {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
 		V mValue;
 		IntLRUCacheQueueNode mIntLRUCacheQueueNode;
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	static class IntLRUCacheQueue {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private IntLRUCacheQueueNode mHead;
 		private IntLRUCacheQueueNode mTail;
@@ -221,22 +147,6 @@ public class IntLRUCache<V> {
 				pIntLRUCacheQueueNode.mNext = null;
 			}
 		};
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
 
 		public boolean isEmpty() {
 			return this.mHead == null;
@@ -287,28 +197,23 @@ public class IntLRUCache<V> {
 			final IntLRUCacheQueueNode next = pIntLRUCacheQueueNode.mNext;
 
 			/* Check if the node already is the tail. */
-			if(next == null) {
-				return;
-			} else {
-				final IntLRUCacheQueueNode previous = pIntLRUCacheQueueNode.mPrevious;
-				next.mPrevious = previous;
+			if(next != null) {
+                final IntLRUCacheQueueNode previous = pIntLRUCacheQueueNode.mPrevious;
+                next.mPrevious = previous;
 
 				/* Check if item to bump is the head. */
-				if(previous == null) {
-					this.mHead = next;
-				} else {
-					previous.mNext = next;
-				}
+                if(previous == null) {
+                    this.mHead = next;
+                } else {
+                    previous.mNext = next;
+                }
 
-				this.mTail.mNext = pIntLRUCacheQueueNode;
-				pIntLRUCacheQueueNode.mPrevious = this.mTail;
-				pIntLRUCacheQueueNode.mNext = null;
-				this.mTail = pIntLRUCacheQueueNode;
-			}
+                this.mTail.mNext = pIntLRUCacheQueueNode;
+                pIntLRUCacheQueueNode.mPrevious = this.mTail;
+                pIntLRUCacheQueueNode.mNext = null;
+                this.mTail = pIntLRUCacheQueueNode;
+            }
 		}
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }

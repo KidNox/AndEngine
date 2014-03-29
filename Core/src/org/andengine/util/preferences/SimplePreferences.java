@@ -14,20 +14,9 @@ import android.preference.PreferenceManager;
  * @since 18:55:12 - 02.08.2010
  */
 public class SimplePreferences {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private static SharedPreferences INSTANCE;
 	private static Editor EDITORINSTANCE;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public static SharedPreferences getInstance(final Context pContext) {
 		if(SimplePreferences.INSTANCE == null) {
@@ -42,18 +31,6 @@ public class SimplePreferences {
 		}
 		return SimplePreferences.EDITORINSTANCE;
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static int incrementAccessCount(final Context pContext, final String pKey) {
 		return SimplePreferences.incrementAccessCount(pContext, pKey, 1);
@@ -73,7 +50,4 @@ public class SimplePreferences {
 		return SimplePreferences.getInstance(pCtx).getInt(pKey, 0);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

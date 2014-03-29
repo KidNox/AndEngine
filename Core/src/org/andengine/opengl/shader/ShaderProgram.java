@@ -22,10 +22,6 @@ import android.opengl.GLES20;
  * @since 19:56:34 - 05.08.2011
  */
 public class ShaderProgram {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final int[] HARDWAREID_CONTAINER = new int[1];
 	private static final int[] PARAMETERS_CONTAINER = new int[1];
 	private static final int[] LENGTH_CONTAINER = new int[1];
@@ -76,7 +72,7 @@ public class ShaderProgram {
 	public int getAttributeLocation(final String pAttributeName) {
 		final Integer location = this.mAttributeLocations.get(pAttributeName);
 		if(location != null) {
-			return location.intValue();
+			return location;
 		} else {
 			throw new ShaderProgramException("Unexpected attribute: '" + pAttributeName + "'. Existing attributes: " + this.mAttributeLocations.toString());
 		}
@@ -85,7 +81,7 @@ public class ShaderProgram {
 	public int getAttributeLocationOptional(final String pAttributeName) {
 		final Integer location = this.mAttributeLocations.get(pAttributeName);
 		if(location != null) {
-			return location.intValue();
+			return location;
 		} else {
 			return ShaderProgramConstants.LOCATION_INVALID;
 		}
@@ -94,7 +90,7 @@ public class ShaderProgram {
 	public int getUniformLocation(final String pUniformName) {
 		final Integer location = this.mUniformLocations.get(pUniformName);
 		if(location != null) {
-			return location.intValue();
+			return location;
 		} else {
 			throw new ShaderProgramException("Unexpected uniform: '" + pUniformName + "'. Existing uniforms: " + this.mUniformLocations.toString());
 		}
@@ -103,15 +99,11 @@ public class ShaderProgram {
 	public int getUniformLocationOptional(final String pUniformName) {
 		final Integer location = this.mUniformLocations.get(pUniformName);
 		if(location != null) {
-			return location.intValue();
+			return location;
 		} else {
 			return ShaderProgramConstants.LOCATION_INVALID;
 		}
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	// ===========================================================
 	// Methods
@@ -349,7 +341,4 @@ public class ShaderProgram {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

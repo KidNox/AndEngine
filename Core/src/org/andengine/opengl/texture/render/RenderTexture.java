@@ -369,7 +369,4 @@ public class RenderTexture extends Texture {
 		return Bitmap.createBitmap(this.getPixelsARGB_8888(pGLState, pX, pY, pWidth, pHeight), pWidth, pHeight, Config.ARGB_8888);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

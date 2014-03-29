@@ -11,13 +11,6 @@ import org.andengine.opengl.texture.Texture;
  * @since 18:14:42 - 09.03.2010
  */
 public class TiledTextureRegion extends BaseTextureRegion implements ITiledTextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	protected int mCurrentTileIndex;
 	protected final int mTileCount;
@@ -299,15 +292,4 @@ public class TiledTextureRegion extends BaseTextureRegion implements ITiledTextu
 		return this.mTextureRegions[pTileIndex].isRotated();
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

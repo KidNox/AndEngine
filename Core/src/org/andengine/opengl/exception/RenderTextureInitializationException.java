@@ -9,19 +9,8 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 11:59:45 AM - Feb 13, 2012
  */
 public class RenderTextureInitializationException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final long serialVersionUID = -7219303294648252076L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public RenderTextureInitializationException() {
 		super();
@@ -39,19 +28,4 @@ public class RenderTextureInitializationException extends AndEngineRuntimeExcept
 		super(pMessage, pThrowable);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

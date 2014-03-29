@@ -9,22 +9,12 @@ package org.andengine.util.adt.list;
  * @since 18:07:43 - 26.01.2012
  */
 public class FloatArrayList implements IFloatList {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final int CAPACITY_INITIAL_DEFAULT = 0;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private float[] mItems;
 	private int mSize;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public FloatArrayList() {
 		this(FloatArrayList.CAPACITY_INITIAL_DEFAULT);
@@ -33,10 +23,6 @@ public class FloatArrayList implements IFloatList {
 	public FloatArrayList(final int pInitialCapacity) {
 		this.mItems = new float[pInitialCapacity];
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
@@ -116,7 +102,4 @@ public class FloatArrayList implements IFloatList {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

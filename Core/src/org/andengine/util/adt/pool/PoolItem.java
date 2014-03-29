@@ -10,24 +10,9 @@ package org.andengine.util.adt.pool;
  * @since 23:02:47 - 21.08.2010
  */
 public abstract class PoolItem {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	Pool<? extends PoolItem> mParent;
 	boolean mRecycled = true;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public Pool<? extends PoolItem> getParent() {
 		return this.mParent;
@@ -41,21 +26,9 @@ public abstract class PoolItem {
 		return pPool == this.mParent;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+	protected void onRecycle() {}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	protected void onRecycle() {
-
-	}
-
-	protected void onObtain() {
-
-	}
+	protected void onObtain() {}
 
 	public void recycle() {
 		if(this.mParent == null) {
@@ -65,7 +38,4 @@ public abstract class PoolItem {
 		this.mParent.recycle(this);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

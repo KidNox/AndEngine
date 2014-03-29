@@ -12,13 +12,6 @@ import org.andengine.entity.scene.Scene;
  * @since 12:03:08 - 14.03.2010
  */
 public interface IGameInterface {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public EngineOptions onCreateEngineOptions();
 	public Engine onCreateEngine(final EngineOptions pEngineOptions);
@@ -40,38 +33,14 @@ public interface IGameInterface {
 	// ===========================================================
 
 	public static interface OnCreateResourcesCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
 		public void onCreateResourcesFinished();
 	}
 
 	public static interface OnCreateSceneCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
 		public void onCreateSceneFinished(final Scene pScene);
 	}
 
 	public static interface OnPopulateSceneCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
 		public void onPopulateSceneFinished();
 	}
 }

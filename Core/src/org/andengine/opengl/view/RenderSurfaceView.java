@@ -14,20 +14,9 @@ import android.util.AttributeSet;
  * @since 11:57:29 - 08.03.2010
  */
 public class RenderSurfaceView extends GLSurfaceView {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private EngineRenderer mEngineRenderer;
 	private ConfigChooser mConfigChooser;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public RenderSurfaceView(final Context pContext) {
 		super(pContext);
@@ -41,9 +30,6 @@ public class RenderSurfaceView extends GLSurfaceView {
 		this.setEGLContextClientVersion(2);
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public ConfigChooser getConfigChooser() throws IllegalStateException {
 		if(this.mConfigChooser == null) {
@@ -88,7 +74,4 @@ public class RenderSurfaceView extends GLSurfaceView {
 		this.setRenderer(this.mEngineRenderer);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

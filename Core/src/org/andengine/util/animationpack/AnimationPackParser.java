@@ -24,10 +24,6 @@ import android.content.res.AssetManager;
  * @since 17:19:26 - 29.07.2011
  */
 public class AnimationPackParser extends DefaultHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final String TAG_ANIMATIONPACK = "animationpack";
 	private static final String TAG_ANIMATIONPACK_ATTRIBUTE_VERSION = "version";
 
@@ -127,13 +123,13 @@ public class AnimationPackParser extends DefaultHandler {
 	@Override
 	public void endElement(final String pUri, final String pLocalName, final String pQualifiedName) throws SAXException {
 		if(pLocalName.equals(AnimationPackParser.TAG_ANIMATIONPACK)) {
-			/* Nothing. */
+			 //Nothing.
 		} else if(pLocalName.equals(AnimationPackParser.TAG_TEXTUREPACKS)) {
-			/* Nothing. */
+			//Nothing.
 		} else if(pLocalName.equals(AnimationPackParser.TAG_TEXTUREPACK)) {
-			/* Nothing. */
+			 //Nothing.
 		} else if(pLocalName.equals(AnimationPackParser.TAG_ANIMATIONS)) {
-			/* Nothing. */
+			 //Nothing.
 		} else if(pLocalName.equals(AnimationPackParser.TAG_ANIMATION)) {
 			final int currentAnimationFrameFrameCount = this.mCurrentAnimationFrameDurations.size();
 			final long[] frameDurations = this.mCurrentAnimationFrameDurations.toArray();
@@ -154,11 +150,4 @@ public class AnimationPackParser extends DefaultHandler {
 		}
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

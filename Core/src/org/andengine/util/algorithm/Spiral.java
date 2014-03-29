@@ -9,13 +9,6 @@ import org.andengine.util.algorithm.path.Direction;
  * @since 22:40:53 - 10.11.2011
  */
 public class Spiral {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final int mCenterX;
 	private final int mCenterY;
@@ -26,10 +19,6 @@ public class Spiral {
 	private Direction mDirection;
 	private int mDirectionSegmentLength;
 	private int mDirectionSegmentIndex;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public Spiral(final int pCenterX, final int pCenterY) {
 		this(pCenterX, pCenterY, 1);
@@ -51,10 +40,6 @@ public class Spiral {
 		this.mDirectionSegmentIndex = 0;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
 	public int getCenterX() {
 		return this.mCenterX;
 	}
@@ -71,13 +56,6 @@ public class Spiral {
 		return this.mY;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void step() {
 		/* Take a step. */
@@ -100,7 +78,4 @@ public class Spiral {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

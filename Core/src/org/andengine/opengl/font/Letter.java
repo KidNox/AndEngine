@@ -10,13 +10,6 @@ import android.util.SparseIntArray;
  * @since 10:30:22 - 03.04.2010
  */
 public class Letter {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	public final char mCharacter;
 	private final boolean mWhitespace;
@@ -32,10 +25,6 @@ public class Letter {
 	public final float mU2;
 	public final float mV2;
 	private SparseIntArray mKernings;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	/**
 	 * For invisible letters or letters without an extent (i.e. whitespaces).
@@ -64,10 +53,6 @@ public class Letter {
 		this.mV2 = pV2;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
 	public int getKerning(final int pCharacter) {
 		if(this.mKernings == null) {
 			return 0;
@@ -79,9 +64,6 @@ public class Letter {
 		return this.mWhitespace;
 	}
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public int hashCode() {
@@ -108,12 +90,6 @@ public class Letter {
 		}
 		return true;
 	}
-
-
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	@Override
 	public String toString() {
@@ -142,7 +118,4 @@ public class Letter {
 		this.mKernings.put(pCharacter, pKerning);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

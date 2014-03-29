@@ -9,13 +9,5 @@ import org.andengine.opengl.util.GLState;
  * @since 16:24:57 - 10.10.2011
  */
 public interface IShaderSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public String getShaderSource(final GLState pGLState);
 }

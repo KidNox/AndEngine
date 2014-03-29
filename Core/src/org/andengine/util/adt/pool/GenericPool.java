@@ -16,23 +16,12 @@ import org.andengine.util.debug.Debug;
  * @since 22:19:55 - 31.08.2010
  */
 public abstract class GenericPool<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final ArrayList<T> mAvailableItems;
 	private final int mGrowth;
 	private final int mAvailableItemCountMaximum;
 
 	private int mUnrecycledItemCount;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public GenericPool() {
 		this(0);
@@ -62,10 +51,6 @@ public abstract class GenericPool<T> {
 			this.batchAllocatePoolItems(pInitialSize);
 		}
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	public synchronized int getUnrecycledItemCount() {
 		return this.mUnrecycledItemCount;
@@ -164,7 +149,4 @@ public abstract class GenericPool<T> {
 		Collections.shuffle(this.mAvailableItems);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -613,7 +613,4 @@ public class Camera implements IUpdateHandler {
 		this.mSurfaceHeight = pNewSurfaceHeight;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

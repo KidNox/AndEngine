@@ -7,13 +7,6 @@ package org.andengine.opengl.texture.region;
  * @since 23:31:52 - 08.08.2011
  */
 public interface ITiledTextureRegion extends ITextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public int getCurrentTileIndex();
 	public void setCurrentTileIndex(final int pCurrentTileIndex);

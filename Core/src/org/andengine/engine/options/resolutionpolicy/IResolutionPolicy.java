@@ -10,13 +10,5 @@ import org.andengine.opengl.view.RenderSurfaceView;
  * @since 11:02:35 - 29.03.2010
  */
 public interface IResolutionPolicy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public void onMeasure(final RenderSurfaceView pRenderSurfaceView, final int pWidthMeasureSpec, final int pHeightMeasureSpec);
 }

@@ -24,37 +24,15 @@ import android.content.res.AssetManager;
  * @since 17:05:15 - 29.07.2011
  */
 public class TexturePackLoader {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private final AssetManager mAssetManager;
 	private final TextureManager mTextureManager;
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public TexturePackLoader(final AssetManager pAssetManager, final TextureManager pTextureManager) {
 		this.mAssetManager = pAssetManager;
 		this.mTextureManager = pTextureManager;
 	}
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public TexturePack loadFromAsset(final String pAssetPath, final String pAssetBasePath) throws TexturePackParseException {
 		try {
@@ -88,7 +66,4 @@ public class TexturePackLoader {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -12,55 +12,22 @@ import android.util.FloatMath;
  * @since 20:42:15 - 17.12.2009
  */
 public final class MathUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	public static final Random RANDOM = new Random(System.nanoTime());
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	public static final float atan2(final float dY, final float dX) {
+	public static float atan2(final float dY, final float dX) {
 		return (float)Math.atan2(dY, dX);
 	}
 
-	public static final float radToDeg(final float pRad) {
+	public static float radToDeg(final float pRad) {
 		return MathConstants.RAD_TO_DEG * pRad;
 	}
 
-	public static final float degToRad(final float pDegree) {
+	public static float degToRad(final float pDegree) {
 		return MathConstants.DEG_TO_RAD * pDegree;
 	}
 
-	public static final int signum(final int n) {
-		if(n == 0) {
-			return 0;
-		} else if(n > 0) {
-			return 1;
-		} else {
-			return -1;
-		}
-	}
-
-	public static final int randomSign() {
+	public static int randomSign() {
 		if(RANDOM.nextBoolean()) {
 			return 1;
 		} else {
@@ -68,7 +35,7 @@ public final class MathUtils {
 		}
 	}
 
-	public static final float random(final float pMin, final float pMax) {
+	public static float random(final float pMin, final float pMax) {
 		return pMin + RANDOM.nextFloat() * (pMax - pMin);
 	}
 
@@ -77,19 +44,19 @@ public final class MathUtils {
 	 * @param pMax inclusive!
 	 * @return
 	 */
-	public static final int random(final int pMin, final int pMax) {
+	public static int random(final int pMin, final int pMax) {
 		return pMin + RANDOM.nextInt(pMax - pMin + 1);
 	}
 
-	public static final boolean isPowerOfTwo(final int n) {
+	public static boolean isPowerOfTwo(final int n) {
 		return ((n != 0) && (n & (n - 1)) == 0);
 	}
 
-	public static final int nextPowerOfTwo(final float f) {
+	public static int nextPowerOfTwo(final float f) {
 		return MathUtils.nextPowerOfTwo((int)(FloatMath.ceil(f)));
 	}
 
-	public static final int nextPowerOfTwo(final int n) {
+	public static int nextPowerOfTwo(final int n) {
 		int k = n;
 
 		if (k == 0) {
@@ -105,7 +72,7 @@ public final class MathUtils {
 		return k + 1;
 	}
 
-	public static final int sum(final int[] pValues) {
+	public static int sum(final int[] pValues) {
 		int sum = 0;
 		for(int i = pValues.length - 1; i >= 0; i--) {
 			sum += pValues[i];
@@ -114,29 +81,7 @@ public final class MathUtils {
 		return sum;
 	}
 
-	public static final void arraySumInternal(final int[] pValues) {
-		final int valueCount = pValues.length;
-		for(int i = 1; i < valueCount; i++) {
-			pValues[i] = pValues[i-1] + pValues[i];
-		}
-	}
-
-	public static final void arraySumInternal(final long[] pValues) {
-		final int valueCount = pValues.length;
-		for(int i = 1; i < valueCount; i++) {
-			pValues[i] = pValues[i-1] + pValues[i];
-		}
-	}
-
-	public static final void arraySumInternal(final long[] pValues, final long pFactor) {
-		pValues[0] = pValues[0] * pFactor;
-		final int valueCount = pValues.length;
-		for(int i = 1; i < valueCount; i++) {
-			pValues[i] = pValues[i-1] + pValues[i] * pFactor;
-		}
-	}
-
-	public static final void arraySumInto(final long[] pValues, final long[] pTargetValues, final long pFactor) {
+	public static void arraySumInto(final long[] pValues, final long[] pTargetValues, final long pFactor) {
 		pTargetValues[0] = pValues[0] * pFactor;
 		final int valueCount = pValues.length;
 		for(int i = 1; i < valueCount; i++) {
@@ -144,7 +89,7 @@ public final class MathUtils {
 		}
 	}
 
-	public static final float arraySum(final float[] pValues) {
+	public static float arraySum(final float[] pValues) {
 		float sum = 0;
 		final int valueCount = pValues.length;
 		for(int i = 0; i < valueCount; i++) {
@@ -153,7 +98,7 @@ public final class MathUtils {
 		return sum;
 	}
 
-	public static final float arrayAverage(final float[] pValues) {
+	public static float arrayAverage(final float[] pValues) {
 		return MathUtils.arraySum(pValues) / pValues.length;
 	}
 
@@ -202,11 +147,11 @@ public final class MathUtils {
 		return MathUtils.revertRotateAroundCenter(pVertices, pRotation, pRotationCenterX, pRotationCenterY);
 	}
 
-	public static final boolean isInBounds(final int pMinValue, final int pMaxValue, final int pValue) {
+	public static boolean isInBounds(final int pMinValue, final int pMaxValue, final int pValue) {
 		return pValue >= pMinValue && pValue <= pMaxValue;
 	}
 
-	public static final boolean isInBounds(final float pMinValue, final float pMaxValue, final float pValue) {
+	public static boolean isInBounds(final float pMinValue, final float pMaxValue, final float pValue) {
 		return pValue >= pMinValue && pValue <= pMaxValue;
 	}
 
@@ -216,7 +161,7 @@ public final class MathUtils {
 	 * @param pValue
 	 * @return
 	 */
-	public static final int bringToBounds(final int pMinValue, final int pMaxValue, final int pValue) {
+	public static int bringToBounds(final int pMinValue, final int pMaxValue, final int pValue) {
 		return Math.max(pMinValue, Math.min(pMaxValue, pValue));
 	}
 
@@ -226,14 +171,14 @@ public final class MathUtils {
 	 * @param pValue
 	 * @return
 	 */
-	public static final float bringToBounds(final float pMinValue, final float pMaxValue, final float pValue) {
+	public static float bringToBounds(final float pMinValue, final float pMaxValue, final float pValue) {
 		return Math.max(pMinValue, Math.min(pMaxValue, pValue));
 	}
 
 	/**
 	 * @return the euclidean distance between the points (pX1, pY1) and (pX2, pY2).
 	 */
-	public static final float distance(final float pX1, final float pY1, final float pX2, final float pY2){
+	public static float distance(final float pX1, final float pY1, final float pX2, final float pY2){
 		final float dX = pX2 - pX1;
 		final float dY = pY2 - pY1;
 		return FloatMath.sqrt((dX * dX) + (dY * dY));
@@ -242,7 +187,7 @@ public final class MathUtils {
 	/**
 	 * @return the euclidean distance between the origin (0, 0) and (pX, pY).
 	 */
-	public static final float length(final float pX, final float pY){
+	public static float length(final float pX, final float pY){
 		return FloatMath.sqrt((pX * pX) + (pY * pY));
 	}
 
@@ -252,7 +197,7 @@ public final class MathUtils {
 	 * @param pMix [0...1]
 	 * @return pX * (1 - pMix) + pY * pMix
 	 */
-	public static final float mix(final float pX, final float pY, final float pMix) {
+	public static float mix(final float pX, final float pY, final float pMix) {
 		return pX * (1 - pMix) + pY * pMix;
 	}
 
@@ -262,16 +207,8 @@ public final class MathUtils {
 	 * @param pMix [0...1]
 	 * @return (int)Math.round(pX * (1 - pMix) + pY * pMix)
 	 */
-	public static final int mix(final int pX, final int pY, final float pMix) {
+	public static int mix(final int pX, final int pY, final float pMix) {
 		return Math.round(pX * (1 - pMix) + pY * pMix);
-	}
-
-	public static final boolean isEven(final int n) {
-		return n % 2 == 0;
-	}
-
-	public static final boolean isOdd(final int n) {
-		return n % 2 == 1;
 	}
 
 	public static float dot(final float pXA, final float pYA, final float pXB, final float pYB) { 
@@ -282,7 +219,4 @@ public final class MathUtils {
 		return pXA * pYB - pXB * pYA;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

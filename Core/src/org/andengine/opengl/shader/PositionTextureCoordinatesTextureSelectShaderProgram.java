@@ -14,10 +14,6 @@ import android.opengl.GLES20;
  * @since 13:56:44 - 25.08.2011
  */
 public class PositionTextureCoordinatesTextureSelectShaderProgram extends ShaderProgram {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static PositionTextureCoordinatesTextureSelectShaderProgram INSTANCE;
 
 	public static final String VERTEXSHADER = PositionTextureCoordinatesShaderProgram.VERTEXSHADER;
@@ -61,10 +57,6 @@ public class PositionTextureCoordinatesTextureSelectShaderProgram extends Shader
 	}
 
 	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
 	// ===========================================================
 
@@ -99,11 +91,4 @@ public class PositionTextureCoordinatesTextureSelectShaderProgram extends Shader
 		super.unbind(pGLState);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

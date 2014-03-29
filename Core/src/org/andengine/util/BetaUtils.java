@@ -21,31 +21,10 @@ import android.content.SharedPreferences;
  * @since 22:43:32 - 02.11.2010
  */
 public class BetaUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+
 
 	private static final String PREFERENCES_BETAUTILS_ID = "preferences.betautils.lastuse";
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static boolean finishWhenExpired(final Activity pActivity, final GregorianCalendar pExpirationDate, final int pTitleResourceID, final int pMessageResourceID) {
 		return BetaUtils.finishWhenExpired(pActivity, pExpirationDate, pTitleResourceID, pMessageResourceID, null, null);
@@ -92,7 +71,4 @@ public class BetaUtils {
 		}
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

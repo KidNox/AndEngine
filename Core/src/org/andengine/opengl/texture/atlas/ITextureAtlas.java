@@ -14,13 +14,6 @@ import org.andengine.util.debug.Debug;
  * @since 14:24:29 - 14.07.2011
  */
 public interface ITextureAtlas<T extends ITextureAtlasSource> extends ITexture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public void addTextureAtlasSource(final T pTextureAtlasSource, final int pTextureX, final int pTextureY) throws IllegalArgumentException;
 	public void addTextureAtlasSource(final T pTextureAtlasSource, final int pTextureX, final int pTextureY, final int pTextureAtlasSourcePadding) throws IllegalArgumentException;
@@ -48,13 +41,6 @@ public interface ITextureAtlas<T extends ITextureAtlasSource> extends ITexture {
 	// ===========================================================
 
 	public static interface ITextureAtlasStateListener<T extends ITextureAtlasSource> extends ITextureStateListener {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
 
 		public void onTextureAtlasSourceLoaded(final ITextureAtlas<T> pTextureAtlas, final T pTextureAtlasSource);
 		public void onTextureAtlasSourceLoadExeption(final ITextureAtlas<T> pTextureAtlas, final T pTextureAtlasSource, final Throwable pThrowable);

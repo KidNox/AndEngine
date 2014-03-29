@@ -19,25 +19,6 @@ import org.andengine.util.math.MathUtils;
  * @see http://www.iti.fh-flensburg.de/lang/algorithmen/geo/
  */
 public class JarvisMarch implements IHullAlgorithm {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public int computeHull(final float[] pVertices, final int pVertexCount, final int pVertexOffsetX, final int pVertexOffsetY, final int pVertexStride) {
@@ -112,7 +93,4 @@ public class JarvisMarch implements IHullAlgorithm {
 		return hullVertexCount;
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

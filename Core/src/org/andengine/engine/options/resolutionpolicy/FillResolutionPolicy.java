@@ -12,25 +12,6 @@ import android.view.View.MeasureSpec;
  * @since 11:22:48 - 29.03.2010
  */
 public class FillResolutionPolicy extends BaseResolutionPolicy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	public void onMeasure(final RenderSurfaceView pRenderSurfaceView, final int pWidthMeasureSpec, final int pHeightMeasureSpec) {
@@ -41,12 +22,4 @@ public class FillResolutionPolicy extends BaseResolutionPolicy {
 
 		pRenderSurfaceView.setMeasuredDimensionProxy(measuredWidth, measuredHeight);
 	}
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

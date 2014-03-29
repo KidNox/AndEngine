@@ -7,14 +7,6 @@ package org.andengine.util.adt.list;
  * @since 11:14:45 - 27.01.2012
  */
 public interface IFloatList {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public boolean isEmpty();
 	public float get(final int pIndex) throws ArrayIndexOutOfBoundsException;
 	public void add(final float pItem);

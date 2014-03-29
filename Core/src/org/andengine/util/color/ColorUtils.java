@@ -8,37 +8,12 @@ package org.andengine.util.color;
  * @since 11:13:45 - 04.08.2010
  */
 public class ColorUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final float[] HSV_TO_COLOR = new float[3];
 	private static final int HSV_TO_COLOR_HUE_INDEX = 0;
 	private static final int HSV_TO_COLOR_SATURATION_INDEX = 1;
 	private static final int HSV_TO_COLOR_VALUE_INDEX = 2;
 
 	private static final int INT_BITS_TO_FLOAT_MASK = 0xFFFFFFFF;
-//	private static final int INT_BITS_TO_FLOAT_MASK = 0xFEFFFFFF; // To avoid producing NaN in the int->float conversion.
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	/**
 	 * @param pHue [0 .. 360)

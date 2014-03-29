@@ -11,17 +11,6 @@ package org.andengine.util.adt.pool;
  * @since 23:00:21 - 21.08.2010
  */
 public abstract class Pool<T extends PoolItem> extends GenericPool<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
 
 	public Pool() {
 		super();
@@ -38,14 +27,6 @@ public abstract class Pool<T extends PoolItem> extends GenericPool<T> {
 	public Pool(final int pInitialSize, final int pGrowth, final int pAvailableItemCountMaximum) {
 		super(pInitialSize, pGrowth, pAvailableItemCountMaximum);
 	}
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
 
 	@Override
 	protected T onHandleAllocatePoolItem() {
@@ -79,10 +60,6 @@ public abstract class Pool<T extends PoolItem> extends GenericPool<T> {
 		super.recyclePoolItem(pPoolItem);
 	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
 	public synchronized boolean ownsPoolItem(final T pPoolItem) {
 		return pPoolItem.mParent == this;
 	}
@@ -92,7 +69,4 @@ public abstract class Pool<T extends PoolItem> extends GenericPool<T> {
 		this.recyclePoolItem((T) pPoolItem);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

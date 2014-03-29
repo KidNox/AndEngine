@@ -13,15 +13,8 @@ import org.andengine.util.IDisposable;
  * @since 14:32:10 - 15.11.2011
  */
 public interface IVertexBufferObject extends IDisposable {
-	// ===========================================================
-	// Constants
-	// ===========================================================
 
 	public static final int HARDWARE_BUFFER_ID_INVALID = -1;
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public boolean isAutoDispose();
 

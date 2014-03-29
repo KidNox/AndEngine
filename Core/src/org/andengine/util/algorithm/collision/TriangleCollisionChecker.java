@@ -10,33 +10,10 @@ import org.andengine.util.adt.transformation.Transformation;
  * @since 17:47:42 - 30.08.2011
  */
 public class TriangleCollisionChecker {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	public static final int TRIANGLE_VERTEX_COUNT = 3;
 
 	private static final float[] VERTICES_CONTAINS_TMP = new float[2 * TriangleCollisionChecker.TRIANGLE_VERTEX_COUNT];
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
 
 	public static boolean checkContains(final float pX1, final float pY1, final float pX2, final float pY2, final float pX3, final float pY3, final float pX, final float pY) {
 		final float v0x = pX3 - pX1;
@@ -84,7 +61,4 @@ public class TriangleCollisionChecker {
 		return TriangleCollisionChecker.checkContains(x1, y1, x2, y2, x3, y3, pX, pY);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

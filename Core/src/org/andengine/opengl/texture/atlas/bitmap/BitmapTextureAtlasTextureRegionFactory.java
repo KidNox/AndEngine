@@ -25,23 +25,8 @@ import android.content.res.Resources;
  * @since 18:15:14 - 09.03.2010
  */
 public class BitmapTextureAtlasTextureRegionFactory {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
-	// ===========================================================
-	// Fields
-	// ===========================================================
 
 	private static String sAssetBasePath = "";
-
-	// ===========================================================
-	// Constructors
-	// ===========================================================
-
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
 
 	/**
 	 * @param pAssetBasePath must end with '<code>/</code>' or have <code>.length() == 0</code>.
@@ -61,18 +46,6 @@ public class BitmapTextureAtlasTextureRegionFactory {
 	public static void reset() {
 		BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("");
 	}
-
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
-
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Methods using BitmapTexture
-	// ===========================================================
 
 	public static TextureRegion createFromAsset(final BitmapTextureAtlas pBitmapTextureAtlas, final Context pContext, final String pAssetPath, final int pTextureX, final int pTextureY) {
 		return BitmapTextureAtlasTextureRegionFactory.createFromAsset(pBitmapTextureAtlas, pContext.getAssets(), pAssetPath, pTextureX, pTextureY);
@@ -215,7 +188,4 @@ public class BitmapTextureAtlasTextureRegionFactory {
 		return new TiledTextureRegion(pBuildableBitmapTextureAtlas, textures);
 	}
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }

@@ -67,10 +67,6 @@ import android.view.WindowManager;
  * @since 12:21:31 - 08.03.2010
  */
 public class Engine implements SensorEventListener, OnTouchListener, ITouchEventCallback, LocationListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-
 	private static final SensorDelay SENSORDELAY_DEFAULT = SensorDelay.GAME;
 	private static final int UPDATEHANDLERS_CAPACITY_DEFAULT = 8;
 	private static final int DRAWHANDLERS_CAPACITY_DEFAULT = 4;
@@ -656,7 +652,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 			throw new IllegalStateException("You need to enable the Vibrator before you can use it!");
 		}
 	}
-
+    //TODO this is not working correct
 	public void enableLocationSensor(final Context pContext, final ILocationListener pLocationListener, final LocationSensorOptions pLocationSensorOptions) {
 		this.mLocationListener = pLocationListener;
 
@@ -780,36 +776,17 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 	// ===========================================================
 
 	public static class UpdateThread extends Thread {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		private Engine mEngine;
 		private final RunnableHandler mRunnableHandler = new RunnableHandler();
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
 
 		public UpdateThread() {
 			super(UpdateThread.class.getSimpleName());
 		}
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
 		public void setEngine(final Engine pEngine) {
 			this.mEngine = pEngine;
 		}
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
 
 		@Override
 		public void run() {
@@ -827,84 +804,25 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 			}
 		}
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
 		public void postRunnable(final Runnable pRunnable) {
 			this.mRunnableHandler.postRunnable(pRunnable);
 		}
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public class EngineDestroyedException extends InterruptedException {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
 		private static final long serialVersionUID = -4691263961728972560L;
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
-
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 
 	public static class EngineLock extends ReentrantLock {
-		// ===========================================================
-		// Constants
-		// ===========================================================
-
 		private static final long serialVersionUID = 671220941302523934L;
-
-		// ===========================================================
-		// Fields
-		// ===========================================================
 
 		final Condition mDrawingCondition = this.newCondition();
 		final AtomicBoolean mDrawing = new AtomicBoolean(false);
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
-
 		public EngineLock(final boolean pFair) {
 			super(pFair);
 		}
-
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
-
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
-
-		// ===========================================================
-		// Methods
-		// ===========================================================
 
 		void notifyCanDraw() {
 			this.mDrawing.set(true);
@@ -927,9 +845,5 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 				this.mDrawingCondition.await();
 			}
 		}
-
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
 	}
 }
